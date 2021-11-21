@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/border.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/halfborder.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_comment_24.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_gps_fixed_24.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/indicator_dot_off.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/indicator_dot_on.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/layout_round.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/lenearound.xml" value="0.190625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/round.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/whiteborder.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/font/font.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/font/font2.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/font/font3.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/font/semi.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_sub1.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page1.xml" value="0.165625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_1.xml" value="0.176" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_2.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_3.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_4.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_1p.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_2p.xml" value="0.18125" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_3p.xml" value="0.18125" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/menu/bottom_navi.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.13697916666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
