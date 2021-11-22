@@ -11,6 +11,18 @@
     tools:context=".MainActivity"
     android:background="@color/baigee">
 
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/whiteborder"
+        android:layout_weight="2.3"
+        app:iconifiedByDefault="false"
+        app:queryHint="검색어를 입력하세요"
+        android:layout_margin="8dp"
+        app:queryBackground="@null">
+
+    </androidx.appcompat.widget.SearchView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
