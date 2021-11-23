@@ -19,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNV;
     private FragmentStateAdapter pagerAdapter;
-    private int num_page = 4;
+    private int num_page = 5;
     private CircleIndicator3 mIndicator;
 
     @Override
@@ -60,7 +60,13 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.navigation_2){
 
                 fragment = new FragmentPage2();
+<<<<<<< Updated upstream
             }else if(id == R.id.navigation_3){
+=======
+
+            }else if (id ==R.id.navigation_3){
+
+>>>>>>> Stashed changes
                 fragment = new FragmentPage3();
             }else{
                 fragment = new FragmentPage4();
