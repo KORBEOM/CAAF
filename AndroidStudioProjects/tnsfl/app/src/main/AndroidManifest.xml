@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tnsfl" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.tnsfl"
+    tools:ignore="CoarseFineLocation">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@drawable/coffee"
         android:label="cafe in"
         android:roundIcon="@drawable/layout_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tnsfl" >
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="98ec923153862035ad46fd5f26c2ee96"/>
         <activity
             android:name=".SubActivity1"
             android:exported="false" />

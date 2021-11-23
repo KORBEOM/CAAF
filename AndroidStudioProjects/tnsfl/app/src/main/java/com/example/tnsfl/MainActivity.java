@@ -13,6 +13,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.example.tnsfl.BottomNavi.FragmentPage1;
 import com.example.tnsfl.BottomNavi.FragmentPage2;
 import com.example.tnsfl.BottomNavi.FragmentPage3;
+import com.example.tnsfl.BottomNavi.FragmentPage4;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,8 +60,10 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.navigation_2){
 
                 fragment = new FragmentPage2();
-            }else {
+            }else if(id == R.id.navigation_3){
                 fragment = new FragmentPage3();
+            }else{
+                fragment = new FragmentPage4();
             }
 
             fragmentTransaction.add(R.id.content_layout, fragment, tag);
