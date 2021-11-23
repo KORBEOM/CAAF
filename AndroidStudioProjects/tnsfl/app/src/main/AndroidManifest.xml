@@ -21,9 +21,6 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="98ec923153862035ad46fd5f26c2ee96"/>
         <activity
-            android:name=".SubActivity1"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"

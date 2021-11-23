@@ -1,6 +1,5 @@
 package com.example.tnsfl.BottomNavi;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,6 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.tnsfl.MyAdapter;
 import com.example.tnsfl.R;
-import com.example.tnsfl.SubActivity1;
 
 import me.relex.circleindicator.CircleIndicator3;
 
