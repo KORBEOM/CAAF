@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "869800933426",
+    "project_id": "tnsfl-6e4bf",
+    "storage_bucket": "tnsfl-6e4bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869800933426:android:ff397c2d8404f5c842242b",
+        "android_client_info": {
+          "package_name": "com.example.tnsfl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869800933426-a6sgkc8k1d96vkrkuh22tgjv682qge54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3fYrovvo6cg9Rey1X-wGqrQ7sWp2gFz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869800933426-a6sgkc8k1d96vkrkuh22tgjv682qge54.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

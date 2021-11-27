@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,11 +15,6 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import net.daum.mf.map.api.MapCircle;
-import net.daum.mf.map.api.MapPOIItem;
-import net.daum.mf.map.api.MapPoint;
-import net.daum.mf.map.api.MapView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
@@ -29,7 +23,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.tnsfl.R;
 
-import java.util.ArrayList;
+import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapView;
 
 
 public class FragmentPage3 extends Fragment implements MapView.CurrentLocationEventListener,MapView.MapViewEventListener{

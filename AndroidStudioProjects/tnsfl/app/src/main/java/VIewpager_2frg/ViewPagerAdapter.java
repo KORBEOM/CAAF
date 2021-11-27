@@ -1,19 +1,17 @@
-package com.example.tnsfl;
+package VIewpager_2frg;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.tnsfl.VIewpager_1frg.Fragment_slide1;
-import com.example.tnsfl.VIewpager_1frg.Fragment_slide2;
-import com.example.tnsfl.VIewpager_1frg.Fragment_slide3;
 
-public class MyAdapter extends FragmentStateAdapter {
+
+public class ViewPagerAdapter extends FragmentStateAdapter {
 
     public int mCount;
-
-    public MyAdapter(FragmentActivity fa, int count) {
-        super(fa);
+    public ViewPagerAdapter(@NonNull FragmentActivity fm , int count) {
+        super(fm);
         mCount = count;
     }
 
@@ -25,18 +23,18 @@ public class MyAdapter extends FragmentStateAdapter {
         switch (index){
             case 0:
             {
-                return new Fragment_slide1();
+                return new Fragment2_slide1();
             }
             case 1:
             {
-                return new Fragment_slide2();
+                return new Fragment2_slide2();
             }
             case 2:
             {
-                return new Fragment_slide3();
+                return new Fragment2_slide3();
             }
             default:
-                return new Fragment_slide3();
+                return new Fragment2_slide1();
         }
     }
 
@@ -45,6 +43,9 @@ public class MyAdapter extends FragmentStateAdapter {
         return 2000;
     }
 
+
     public int getRealPosition(int position) { return position % mCount; }
+
+
 
 }

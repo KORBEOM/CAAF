@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,7 +26,7 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
     private int num_page = 4;
     private CircleIndicator3 mIndicator;
     private ImageView widget_1;
-
+    LinearLayout Cafewidget ;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,13 +70,17 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
             }
         });
 
-
+        Cafewidget = view.findViewById(R.id.CafeWidget);
+        Cafewidget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(),"goooodd",Toast.LENGTH_LONG).show();
+            }
+        });
 
         return view;
     }
 
-    private static void createDotPanel(int i, int indicator_dot_off, int indicator_dot_on, int i1) {
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

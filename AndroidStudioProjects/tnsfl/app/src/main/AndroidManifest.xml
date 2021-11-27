@@ -12,9 +12,8 @@
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
-        android:icon="@drawable/coffee"
-        android:label="cafe in"
-        android:roundIcon="@drawable/layout_round"
+        android:icon="@drawable/caffin"
+        android:label="Cafe In"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tnsfl" >
         <meta-data
