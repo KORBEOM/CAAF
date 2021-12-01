@@ -10,6 +10,8 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_comment_24.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_gps_fixed_24.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/drawable/indicator_dot_off.xml" value="0.1" />
@@ -25,39 +27,42 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/font/font3.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/font/semi.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/2page_frame.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/Viewpager1/frame_1p.xml" value="0.11727456940222898" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/Viewpager1/frame_2p.xml" value="0.11727456940222898" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_main.xml" value="0.4134948096885813" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_sub1.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frag2_viewpage1.xml" value="0.14739583333333334" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page1.xml" value="0.165625" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_1.xml" value="0.264" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_2.xml" value="0.176" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_3.xml" value="0.264" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_4.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame2_1p.xml" value="0.14739583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame2_2p.xml" value="0.14739583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame2_3p.xml" value="0.14739583333333334" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_1p.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_1p_2page.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_2p.xml" value="0.18125" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_3p.xml" value="0.18125" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/list_item.xml" value="0.16458333333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/recycleview.xml" value="0.16" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/setting.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/settings.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/view2page1.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/view2page2.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/layout/view2page3.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/menu/bottom_navi.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13697916666666668" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/tnsfl/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.13697916666666668" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_main.xml" value="0.359375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_sub1.xml" value="0.359375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_1.xml" value="0.359375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_2.xml" value="0.359375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_3.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_4.xml" value="0.359375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_1p.xml" value="0.359375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_2p.xml" value="0.359375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_3p.xml" value="0.359375" />
-
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_main.xml" value="0.1480978260869565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_sub1.xml" value="0.1480978260869565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_1.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_2.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_3.xml" value="0.1431159420289855" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_4.xml" value="0.22" />
-
+        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_1p.xml" value="0.359375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_2p.xml" value="0.359375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_3p.xml" value="0.359375" />
       </map>
     </option>
   </component>

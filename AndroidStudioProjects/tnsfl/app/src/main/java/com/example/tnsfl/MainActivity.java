@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
@@ -19,6 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNV;
     private FragmentStateAdapter pagerAdapter;
+    private FragmentPagerAdapter pagerAdapter2;
     private int num_page = 5;
     private CircleIndicator3 mIndicator;
 
@@ -60,8 +62,17 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.navigation_2){
 
                 fragment = new FragmentPage2();
+<<<<<<< HEAD
 
             }else if (id ==R.id.navigation_3){
+=======
+
+            }else if(id == R.id.navigation_3){
+
+            }else if (id ==R.id.navigation_3){
+
+
+>>>>>>> b101fce231bfec718c0c69aa131c2abedf4155b0
                 fragment = new FragmentPage3();
             }else{
                 fragment = new FragmentPage4();

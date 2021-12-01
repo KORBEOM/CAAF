@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,15 +18,26 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import net.daum.mf.map.api.MapView;
 
+=======
+>>>>>>> b101fce231bfec718c0c69aa131c2abedf4155b0
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.tnsfl.R;
 
+<<<<<<< HEAD
 public class FragmentPage3 extends Fragment {
+=======
+import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapView;
+
+
+public class FragmentPage3 extends Fragment implements MapView.CurrentLocationEventListener,MapView.MapViewEventListener{
+>>>>>>> b101fce231bfec718c0c69aa131c2abedf4155b0
 
     private static final String LOG_TAG = "Fragment3";
     private static final int RESULT_OK = 1;
