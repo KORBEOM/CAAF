@@ -62,12 +62,17 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.navigation_2){
 
                 fragment = new FragmentPage2();
+<<<<<<< HEAD
+
+            }else if (id ==R.id.navigation_3){
+=======
 
             }else if(id == R.id.navigation_3){
 
             }else if (id ==R.id.navigation_3){
 
 
+>>>>>>> b101fce231bfec718c0c69aa131c2abedf4155b0
                 fragment = new FragmentPage3();
             }else{
                 fragment = new FragmentPage4();
