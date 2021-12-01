@@ -60,13 +60,8 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.navigation_2){
 
                 fragment = new FragmentPage2();
-<<<<<<< Updated upstream
-            }else if(id == R.id.navigation_3){
-=======
 
             }else if (id ==R.id.navigation_3){
-
->>>>>>> Stashed changes
                 fragment = new FragmentPage3();
             }else{
                 fragment = new FragmentPage4();
