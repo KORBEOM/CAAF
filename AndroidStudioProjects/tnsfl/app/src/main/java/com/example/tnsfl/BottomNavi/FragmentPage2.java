@@ -1,6 +1,7 @@
 package com.example.tnsfl.BottomNavi;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,30 +15,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-<<<<<<< HEAD
 import com.example.tnsfl.DataModel;
-import com.example.tnsfl.MyRecyclerViewAdapter2;
-=======
 import com.example.tnsfl.DataSet.BoardData;
 import com.example.tnsfl.DataSet.Boardexist;
 import com.example.tnsfl.Interface.BoardService;
->>>>>>> 88ead84c2611f41b04b0fb052aa69c742aad2ff7
+import com.example.tnsfl.MyRecyclerViewAdapter2;
 import com.example.tnsfl.R;
 
-<<<<<<< HEAD
+import java.util.ArrayList;
 import java.util.List;
 
+import VIewpager_2frg.ViewPagerAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class FragmentPage2 extends Fragment {
-=======
-import java.util.ArrayList;
-
-import VIewpager_2frg.ViewPagerAdapter;
 
 public class FragmentPage2 extends Fragment implements View.OnClickListener {
 
@@ -64,7 +58,6 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
 
     private void setContentView(int fragment_page_1) {
     }
->>>>>>> b101fce231bfec718c0c69aa131c2abedf4155b0
 
     private static final String TAG = "goooooo";
 
@@ -73,7 +66,6 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_page_2, container, false);
-<<<<<<< HEAD
 
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -86,9 +78,6 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
 
 
 
-
-=======
-<<<<<<< HEAD
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.0.18:3000/")
@@ -137,8 +126,7 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
                 Log.d(TAG, "onFailure:" + t.getMessage());
             }
         });
-=======
->>>>>>> 88ead84c2611f41b04b0fb052aa69c742aad2ff7
+
         mPager = view.findViewById(R.id.viewpager22);
         pagerAdapter = new ViewPagerAdapter(getActivity(),num_page);
         mPager.setAdapter(pagerAdapter);
@@ -158,7 +146,6 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
         });
 
 
->>>>>>> b101fce231bfec718c0c69aa131c2abedf4155b0
 
 
 
