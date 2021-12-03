@@ -16,6 +16,7 @@
         android:label="Cafe In"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tnsfl" >
+        <activity android:name=".CafeInfo"/>
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="98ec923153862035ad46fd5f26c2ee96"/>
