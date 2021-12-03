@@ -9,7 +9,8 @@
     android:layout_weight="1"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/baigee">
+    android:background="@color/baigee"
+    android:clickable="true">
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
@@ -33,7 +34,8 @@
         android:layout_weight="1"
         android:background="@drawable/layout_round"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:clickable="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,20 +45,21 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/CafeWidget"
+                android:id="@+id/home_pic1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/widget_1"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:src="@drawable/cufu" />
+                    android:src="@drawable/cufu"
+                    />
 
                 <TextView
+                    android:id="@+id/widget_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -68,6 +71,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/home_pic2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -93,6 +97,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:id="@+id/home_pic3"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -124,6 +129,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/home_pic4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -148,6 +154,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/home_pic5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -173,6 +180,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/home_pic6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -205,6 +213,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/home_pic7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -229,6 +238,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/home_pic8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -254,6 +264,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/home_pic9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -287,6 +298,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/home_pic10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -312,6 +324,7 @@
 
 
             <LinearLayout
+                android:id="@+id/home_pic11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -336,6 +349,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/home_pic12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
