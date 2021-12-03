@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -21,17 +20,22 @@ import com.example.tnsfl.R;
 
 import me.relex.circleindicator.CircleIndicator3;
 
-public class FragmentPage1 extends Fragment implements View.OnClickListener {
+public class FragmentPage1 extends Fragment {
 
     private ViewPager2 mPager;
     private FragmentStateAdapter pagerAdapter;
     private int num_page = 4;
     private CircleIndicator3 mIndicator;
+<<<<<<< HEAD
     private ImageView widget_1;
 
     LinearLayout widget1 , widget2,widget3,widget4,widget5,widget6,widget7,widget8,widget9,widget10,widget11,widget12;
 
 
+=======
+    LinearLayout Home_pic1 ;
+    LinearLayout Home_pic2;
+>>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +84,7 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
         mPager.setAdapter(pagerAdapter);
         mIndicator = view.findViewById(R.id.indicator);
         mIndicator.setViewPager(mPager);
-        mIndicator.createIndicators(num_page,0);
+        mIndicator.createIndicators(num_page, 0);
         mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         mPager.setCurrentItem(1000); //시작 지점
         mPager.setOffscreenPageLimit(4); //최대 이미지 수
@@ -97,13 +101,28 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                mIndicator.animatePageSelected(position%num_page);
+                mIndicator.animatePageSelected(position % num_page);
             }
         });
 
+<<<<<<< HEAD
+=======
+        Home_pic1 = view.findViewById(R.id.home_pic1);
+        Home_pic1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "goooodd", Toast.LENGTH_LONG).show();
+            }
+        });
+>>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
 
         return view;
     }
+
+
+
+
+
 
 
     @Override
@@ -111,6 +130,7 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
     }
 
+<<<<<<< HEAD
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(getActivity(), CafeInfo.class);
@@ -165,6 +185,8 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
                 break;
         }
     }
+=======
+>>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
 
 
 }
