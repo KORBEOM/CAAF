@@ -45,11 +45,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_1"
-=======
-                android:id="@+id/home_pic1"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -63,7 +59,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/widget_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -75,11 +70,7 @@
             </LinearLayout>
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_2"
-=======
-                android:id="@+id/home_pic2"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -106,7 +97,6 @@
             <LinearLayout
                 android:id="@+id/widget_3"
                 android:layout_width="match_parent"
-                android:id="@+id/home_pic3"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -138,11 +128,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_4"
-=======
-                android:id="@+id/home_pic4"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -167,11 +153,7 @@
             </LinearLayout>
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_5"
-=======
-                android:id="@+id/home_pic5"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -197,11 +179,7 @@
             </LinearLayout>
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_6"
-=======
-                android:id="@+id/home_pic6"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -234,11 +212,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_7"
-=======
-                android:id="@+id/home_pic7"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -263,11 +237,7 @@
             </LinearLayout>
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_8"
-=======
-                android:id="@+id/home_pic8"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -293,11 +263,7 @@
             </LinearLayout>
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_9"
-=======
-                android:id="@+id/home_pic9"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -331,11 +297,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_10"
-=======
-                android:id="@+id/home_pic10"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -361,11 +323,7 @@
 
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_11"
-=======
-                android:id="@+id/home_pic11"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -390,11 +348,7 @@
             </LinearLayout>
 
             <LinearLayout
-<<<<<<< HEAD
                 android:id="@+id/widget_12"
-=======
-                android:id="@+id/home_pic12"
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -20,22 +20,16 @@ import com.example.tnsfl.R;
 
 import me.relex.circleindicator.CircleIndicator3;
 
-public class FragmentPage1 extends Fragment {
+public class FragmentPage1 extends Fragment implements View.OnClickListener {
 
     private ViewPager2 mPager;
     private FragmentStateAdapter pagerAdapter;
     private int num_page = 4;
     private CircleIndicator3 mIndicator;
-<<<<<<< HEAD
-    private ImageView widget_1;
 
-    LinearLayout widget1 , widget2,widget3,widget4,widget5,widget6,widget7,widget8,widget9,widget10,widget11,widget12;
+    LinearLayout widget1, widget2,widget3,widget4,widget5,widget6,widget7,widget8,widget9,widget10,widget11,widget12;
 
 
-=======
-    LinearLayout Home_pic1 ;
-    LinearLayout Home_pic2;
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,32 +99,17 @@ public class FragmentPage1 extends Fragment {
             }
         });
 
-<<<<<<< HEAD
-=======
-        Home_pic1 = view.findViewById(R.id.home_pic1);
-        Home_pic1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "goooodd", Toast.LENGTH_LONG).show();
-            }
-        });
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
-
         return view;
     }
-
-
-
-
 
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setContentView(R.layout.fragment_page_1);
     }
 
-<<<<<<< HEAD
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(getActivity(), CafeInfo.class);
@@ -185,8 +164,5 @@ public class FragmentPage1 extends Fragment {
                 break;
         }
     }
-=======
->>>>>>> d007747f63abc7d146032def68fd9e3dac43be9e
-
 
 }
