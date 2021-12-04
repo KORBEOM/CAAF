@@ -27,7 +27,7 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
     private int num_page = 4;
     private CircleIndicator3 mIndicator;
 
-    LinearLayout widget1, widget2,widget3,widget4,widget5,widget6,widget7,widget8,widget9,widget10,widget11,widget12;
+    LinearLayout widget1,widget2,widget3,widget4,widget5,widget6,widget7,widget8,widget9,widget10,widget11,widget12;
 
 
     @Override
