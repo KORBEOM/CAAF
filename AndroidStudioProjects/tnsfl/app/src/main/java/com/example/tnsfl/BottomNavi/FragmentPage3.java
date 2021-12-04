@@ -9,9 +9,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -48,6 +51,7 @@ public class FragmentPage3 extends Fragment{
         autoCompleteTextView = (AutoCompleteTextView)view.findViewById(R.id.auto_search);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),R.layout.dropdwonlist,COUNTRIES);
         autoCompleteTextView.setAdapter(adapter);
+        autoCompleteTextView.setOnItemClickListener(clickListener);
 
         mapView = new MapView(getActivity());
         mapViewContainer= (ViewGroup) view.findViewById(R.id.map_view);
@@ -57,5 +61,12 @@ public class FragmentPage3 extends Fragment{
         return view;
     }
 
+    AdapterView.OnItemClickListener clickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            String toastMessage = ((TextView)view).getText().toString();
+            Toast.makeText(getContext(),toastMessage , Toast.LENGTH_SHORT).show();
+        }
+    };
 
 }

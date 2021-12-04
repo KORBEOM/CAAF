@@ -20,10 +20,9 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dropdown"
     style="?android:attr/dropDownItemStyle"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/whiteborder"
-    android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+    android:background="@drawable/drop_border"
+    android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
     android:singleLine="true"
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
-    android:ellipsize="marquee" />
+    android:ellipsize="end" />

@@ -20,9 +20,10 @@
             android:maxLines="10"
             android:completionThreshold="1"
             android:hint="검색어를 입력하세요"
-            android:paddingLeft="10dp"
+            android:paddingLeft="13dp"
             android:layout_margin="8dp"
             />
+
 <!--        <androidx.appcompat.widget.SearchView-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="0dp"-->
