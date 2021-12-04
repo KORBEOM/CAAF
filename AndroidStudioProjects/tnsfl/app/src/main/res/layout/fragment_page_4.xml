@@ -25,6 +25,7 @@
             android:textColor="#070707"
             android:text="마이페이지"
             android:background="@color/basic"
+            android:fontFamily="@font/kokomi"
             android:textSize="35dp">
     </TextView>
 
@@ -94,7 +95,8 @@
             android:textColor="#070707"
             android:background="@drawable/frg4set"
             android:textSize="25dp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:fontFamily="@font/kokomi"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -105,7 +107,8 @@
             android:text="환경설정"
             android:background="@drawable/frg4set"
             android:textSize="25dp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:fontFamily="@font/kokomi"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -114,6 +117,7 @@
             android:gravity="center"
             android:textColor="#070707"
             android:text="고객센터"
+            android:fontFamily="@font/kokomi"
             android:background="@drawable/frg4set"
             android:textSize="25dp"
             android:layout_margin="5dp"/>
@@ -126,6 +130,7 @@
             android:gravity="center"
             android:text="약관 및 정책"
             android:textColor="#070707"
+            android:fontFamily="@font/kokomi"
             android:textSize="25dp"
             android:layout_margin="5dp"/>
 
@@ -138,6 +143,7 @@
             android:text="버전 정보"
             android:background="@drawable/frg4set"
             android:textSize="25dp"
+            android:fontFamily="@font/kokomi"
             android:layout_margin="5dp"/>
     </LinearLayout>
 
