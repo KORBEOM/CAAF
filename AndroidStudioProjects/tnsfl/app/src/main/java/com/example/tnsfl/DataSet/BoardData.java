@@ -36,4 +36,26 @@ public class BoardData {
                 ", hit=" + hit + '}';
 
     }
+
+    public int getNumber(){
+        return this.number;
+    }
+    public String getTitle(){
+        return this.title;
+    }
+    public String getContent(){
+        return this.content;
+    }
+    public String getUserid(){
+        return this.userid;
+    }
+    public String getDate(){
+        return this.date;
+    }
+    public int getHit(){
+        return this.hit;
+    }
+    public String getComment() {
+        return  this.comment;
+    }
 }

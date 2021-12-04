@@ -2,14 +2,44 @@
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <RelativeLayout
-        android:id="@+id/map_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/baigee"
+        >
+        <AutoCompleteTextView
+            android:id="@+id/auto_search"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/whiteborder"
+            android:maxLines="10"
+            android:completionThreshold="1"
+            android:hint="검색어를 입력하세요"
+            android:paddingLeft="10dp"
+            android:layout_margin="8dp"
+            />
+<!--        <androidx.appcompat.widget.SearchView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:background="@drawable/whiteborder"-->
+<!--            android:layout_weight="1"-->
+<!--            app:iconifiedByDefault="false"-->
+<!--            app:queryHint="검색어를 입력하세요"-->
+<!--            android:layout_margin="8dp"-->
+<!--            app:queryBackground="@null">-->
 
+<!--        </androidx.appcompat.widget.SearchView>-->
+        <RelativeLayout
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"/>
 
-    </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,6 +1,11 @@
 package com.example.tnsfl;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -17,6 +22,10 @@ import com.example.tnsfl.BottomNavi.FragmentPage3;
 import com.example.tnsfl.BottomNavi.FragmentPage4;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.security.MessageDigest;
+
+import me.relex.circleindicator.CircleIndicator3;
+
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNV;
     private FragmentStateAdapter pagerAdapter;
@@ -28,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getAppKeyHash();
 
         mBottomNV = findViewById(R.id.nav_view);
         mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
@@ -64,12 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new FragmentPage2();
 
             }else if (id ==R.id.navigation_3){
-
-            }else if(id == R.id.navigation_3){
-
-            }else if (id ==R.id.navigation_3){
-
-
                 fragment = new FragmentPage3();
             }else{
                 fragment = new FragmentPage4();
@@ -87,9 +91,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    private class CircleIndicator3 {
+    private void getAppKeyHash() {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md;
+                md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                String something = new String(Base64.encode(md.digest(), 0));
+                Log.e("Hash key", something);
+            }
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            Log.e("name not found", e.toString());
+        }
     }
+
+
+
 
 }
 
