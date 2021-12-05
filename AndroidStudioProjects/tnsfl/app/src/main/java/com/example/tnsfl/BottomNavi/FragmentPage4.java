@@ -13,6 +13,10 @@ import com.example.tnsfl.R;
 
 public class FragmentPage4 extends Fragment {
 
+
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -20,6 +24,10 @@ public class FragmentPage4 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_page_4, container, false);
         return view;
     }
+
+
+
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

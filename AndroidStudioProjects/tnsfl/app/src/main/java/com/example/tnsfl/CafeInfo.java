@@ -30,7 +30,7 @@ public class CafeInfo extends AppCompatActivity {
         setResult(RESULT_OK, getInt);
         switch (index){
             case 1:
-                test.setText("1");
+                test.setText("리사이클");
                 break;
             case 2:
                 test.setText("2");
