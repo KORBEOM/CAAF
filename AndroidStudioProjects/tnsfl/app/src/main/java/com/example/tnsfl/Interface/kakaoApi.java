@@ -13,6 +13,9 @@ public interface kakaoApi {
     @GET("v2/local/search/keyword.json")
     Call<kakaResult> getSearch(
             @Header("Authorization") String key,
-            @Query("query") String query
+            @Query("query") String query,
+            @Query("x") String x,
+            @Query("y") String y,
+            @Query("radius") Integer radius
     );
 }
