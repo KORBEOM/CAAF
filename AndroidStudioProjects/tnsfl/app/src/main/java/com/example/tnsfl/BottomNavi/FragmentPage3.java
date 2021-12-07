@@ -531,7 +531,6 @@ public class FragmentPage3 extends Fragment{
             "달달한가",
             "버드소리천안점",
             "맛초떡복이",
-            "36.76747836",
             "밀카천안점",
             "카페고즈넉",
             "잇덴굿",

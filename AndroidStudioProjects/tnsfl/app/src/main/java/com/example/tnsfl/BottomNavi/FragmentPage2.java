@@ -15,14 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.tnsfl.DataModel;
 import com.example.tnsfl.DataSet.BoardData;
 import com.example.tnsfl.DataSet.Boardexist;
 import com.example.tnsfl.Interface.BoardService;
-import com.example.tnsfl.MyRecyclerViewAdapter2;
+import com.example.tnsfl.Adapter.MyRecyclerViewAdapter2;
 import com.example.tnsfl.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import VIewpager_2frg.ViewPagerAdapter;
@@ -33,14 +31,16 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class FragmentPage2 extends Fragment implements View.OnClickListener {
+
+
+public class FragmentPage2 extends Fragment  {
 
     private ViewPager2 mPager;
     private FragmentStateAdapter pagerAdapter;
     private int num_page = 4;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<DataModel> dataModelArrayList ;
+    private List<BoardData> dataModelArrayList ;
     private RecyclerView.Adapter adapter;
 
 
@@ -69,8 +69,7 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
 
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
-        MyRecyclerViewAdapter2 adpater = new MyRecyclerViewAdapter2(dataModelArrayList, getContext());
-        recyclerView.setAdapter(adapter);
+
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
@@ -80,7 +79,7 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.18:3000/")
+                .baseUrl("http://192.168.0.105:3000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -94,8 +93,11 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
             public void onResponse(Call<List<BoardData>> call, Response<List<BoardData>> response) {
                 if (response.isSuccessful()) {
 
-                    List<BoardData> result = response.body();
-                    Log.d(TAG, "onResponse:성공, 결과 \n" + result.toString());
+                    dataModelArrayList = response.body();
+                    Log.d(TAG, "onResponse:성공, 결과 \n" + dataModelArrayList.get(0));
+
+                    MyRecyclerViewAdapter2 adapter = new MyRecyclerViewAdapter2(dataModelArrayList, getContext());
+                    recyclerView.setAdapter(adapter);
                 } else {
 
                     Log.d(TAG, "onResponse:실패");
@@ -108,24 +110,7 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
             }
         });
 
-        call2.enqueue(new Callback<List<Boardexist>>() {
-            @Override
-            public void onResponse(Call<List<Boardexist>> call2, Response<List<Boardexist>>response)  {
-                if (response.isSuccessful()) {
 
-                    List<Boardexist> result = response.body();
-                    Log.d(TAG, "onResponse: 성공, 결과\n" + result.toString());
-                } else {
-
-                    Log.d(TAG, "onResponse: 실패");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Boardexist>> call2, Throwable t) {
-                Log.d(TAG, "onFailure:" + t.getMessage());
-            }
-        });
 
         mPager = view.findViewById(R.id.viewpager22);
         pagerAdapter = new ViewPagerAdapter(getActivity(),num_page);
@@ -158,10 +143,6 @@ public class FragmentPage2 extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    @Override
-    public void onClick(View view) {
-
-    }
 
 
 }
