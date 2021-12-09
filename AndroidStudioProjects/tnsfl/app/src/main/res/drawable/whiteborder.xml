@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="10dp"
     android:shape="rectangle" >
-    <solid android:color="@color/pick6" />
+    <solid android:color="@color/pick5" />
     <corners
         android:bottomLeftRadius="15dp"
         android:bottomRightRadius="15dp"
@@ -10,6 +10,6 @@
         android:topRightRadius="15dp" />
     <stroke
         android:width="3dp"
-        android:color="@color/pick4" />
+        android:color="@color/ccc" />
 </shape>
 

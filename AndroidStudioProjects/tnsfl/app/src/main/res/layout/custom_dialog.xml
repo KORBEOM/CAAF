@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/whitebackground"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="322dp"
+    android:layout_height="155dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rrrrriigght"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:text="사용설명서"
+            android:layout_weight="0.5"/>
+        <TextView
+            android:id="@+id/put_text"
+            android:background="@drawable/rrrrriigght"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.1"
+            android:gravity="center"
+            android:text="홈 위젯들을 눌러 카페 정보들을 확인,검색하고 다른 카페들을 보고 공유 할 수 있습니다.
+또 위치를 찾을 수 있습니다."/>
+        <LinearLayout
+            android:layout_marginRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="right">
+            <Button
+                android:text="취소"
+                android:textSize="15dp"
+                android:id="@+id/btnCancle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="center"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

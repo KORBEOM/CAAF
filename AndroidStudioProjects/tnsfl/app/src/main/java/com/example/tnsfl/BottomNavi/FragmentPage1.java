@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -76,9 +75,6 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
         mPager = view.findViewById(R.id.viewpager);
         pagerAdapter = new MyAdapter(getActivity(), num_page);
         mPager.setAdapter(pagerAdapter);
-        mIndicator = view.findViewById(R.id.indicator);
-        mIndicator.setViewPager(mPager);
-        mIndicator.createIndicators(num_page, 0);
         mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         mPager.setCurrentItem(1000); //시작 지점
         mPager.setOffscreenPageLimit(4); //최대 이미지 수
@@ -95,7 +91,7 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                mIndicator.animatePageSelected(position % num_page);
+
             }
         });
 

@@ -4,148 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/pick5"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:orientation="horizontal">
-
-
-
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rrrrriigght"
+        >
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="#070707"
-            android:text="마이페이지"
-            android:background="@color/basic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:background="@color/pick5"
+            android:text="환경 설정"
+            android:layout_margin="15dp"
+            android:textSize="35dp"
             android:fontFamily="@font/kokomi"
-            android:textSize="35dp">
-    </TextView>
+            android:layout_gravity="center">
 
-
-
-
-
-
+        </TextView>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:layout_margin="20dp">
-
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:layout_gravity="left"
-            android:src="@drawable/user">
-
-
-
-        </ImageView>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:textColor="#070707"
-                android:text="로그인"
-                android:background="@drawable/layout_round"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:fontFamily="@font/kokomi"
-                android:textSize="25dp" />
-
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_margin="5dp">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="나의 카페인"
-            android:textColor="#070707"
-            android:background="@drawable/frg4set"
-            android:textSize="25dp"
-            android:layout_margin="5dp"
-            android:fontFamily="@font/kokomi"/>
+        android:layout_height="0dp"
+        android:layout_weight="7">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="#070707"
-            android:text="환경설정"
-            android:background="@drawable/frg4set"
-            android:textSize="25dp"
-            android:layout_margin="5dp"
-            android:fontFamily="@font/kokomi"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="#070707"
-            android:text="고객센터"
+            android:id="@+id/frg4_tx1"
+            android:layout_height="wrap_content"
+            android:text="고객 센터"
+            android:textSize="30dp"
+            android:background="@drawable/whitebackground"
             android:fontFamily="@font/kokomi"
-            android:background="@drawable/frg4set"
-            android:textSize="25dp"
-            android:layout_margin="5dp"/>
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:textColor="@color/black">
 
+        </TextView>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/frg4set"
-            android:gravity="center"
-            android:text="약관 및 정책"
-            android:textColor="#070707"
+            android:background="@drawable/whitebackground"
+            android:textColor="@color/black"
+            android:id="@+id/frg4_tx2"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="버전정보"
             android:fontFamily="@font/kokomi"
-            android:textSize="25dp"
-            android:layout_margin="5dp"/>
+            android:gravity="center"
+            android:textSize="30dp"
+            >
 
+        </TextView>
         <TextView
+            android:id="@+id/frg4_tx3"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="#070707"
-            android:text="버전 정보"
-            android:background="@drawable/frg4set"
-            android:textSize="25dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/kokomi"
-            android:layout_margin="5dp"/>
+            android:layout_margin="20dp"
+            android:background="@drawable/whitebackground"
+            android:gravity="center"
+            android:text="정보"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/frg4_tx4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:fontFamily="@font/kokomi"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:text="사용 설명서"
+            android:background="@drawable/whitebackground"
+            android:gravity="center"
+            >
+
+        </TextView>
+
+
     </LinearLayout>
+
 
 
 
