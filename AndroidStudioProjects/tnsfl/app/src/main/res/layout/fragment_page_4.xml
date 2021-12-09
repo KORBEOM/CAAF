@@ -7,38 +7,6 @@
     android:background="@color/pick5"
     android:orientation="vertical">
 
-<<<<<<< Updated upstream
-=======
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:orientation="horizontal">
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:text="마이페이지"
-            android:fontFamily="@font/kokomi"
-            android:textSize="40dp"
-            android:layout_marginTop="10dp">
-    </TextView>
-
-
-
-
-
-
-    </LinearLayout>
-
->>>>>>> Stashed changes
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -66,23 +34,16 @@
 
         <TextView
             android:layout_width="match_parent"
-<<<<<<< Updated upstream
             android:id="@+id/frg4_tx1"
             android:layout_height="wrap_content"
             android:text="고객 센터"
             android:textSize="30dp"
             android:background="@drawable/whitebackground"
             android:fontFamily="@font/kokomi"
-=======
-            android:id="@+id/frg4_1"
-            android:layout_height="0dp"
-            android:layout_weight="1"
->>>>>>> Stashed changes
             android:gravity="center"
             android:layout_margin="20dp"
             android:textColor="@color/black">
 
-<<<<<<< Updated upstream
         </TextView>
         <TextView
             android:layout_width="match_parent"
@@ -96,50 +57,24 @@
             android:gravity="center"
             android:textSize="30dp"
             >
-=======
->>>>>>> Stashed changes
 
         </TextView>
         <TextView
             android:id="@+id/frg4_tx3"
             android:layout_width="match_parent"
-<<<<<<< Updated upstream
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:textColor="@color/black"
             android:fontFamily="@font/kokomi"
             android:layout_margin="20dp"
             android:background="@drawable/whitebackground"
-=======
-            android:id="@+id/frg4_2"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="#070707"
-            android:text="고객센터"
-            android:fontFamily="@font/kokomi"
-            android:background="@drawable/frg4set"
-            android:textSize="25dp"
-            android:layout_margin="5dp"/>
-
-        <TextView
-            android:id="@+id/frg4_3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/frg4set"
->>>>>>> Stashed changes
             android:gravity="center"
             android:text="정보"
             >
 
         </TextView>
         <TextView
-<<<<<<< Updated upstream
             android:id="@+id/frg4_tx4"
-=======
-            android:id="@+id/frg4_4"
->>>>>>> Stashed changes
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30dp"
@@ -160,3 +95,5 @@
 
 
 </LinearLayout>
+
+
