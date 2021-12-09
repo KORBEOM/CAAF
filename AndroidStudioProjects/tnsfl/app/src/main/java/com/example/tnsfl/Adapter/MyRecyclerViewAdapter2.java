@@ -1,8 +1,6 @@
-package com.example.tnsfl;
+package com.example.tnsfl.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,25 +13,27 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.example.tnsfl.BottomNavi.FragmentPage2;
+import com.example.tnsfl.DataSet.BoardData;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import com.example.tnsfl.R;
 
 public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewAdapter2.MyViewHolder> {
 
 
-    private final ArrayList<DataModel> dataModelArrayList;
+    private final List<BoardData> dataModelArrayList;
     private Context context;
     private OnPostListener onPostListener;
     String getContentsNum;
     int pos;
 
-    private final String TAG = "myRecyclerViewAdapter";
+    private final String TAG = "myRecyclerViewAdapteraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
     // 생성자: 생성자에서 데이터 리스트 객체를 전달받음.
-    public MyRecyclerViewAdapter2(ArrayList<DataModel> dataModelArrayList, Context context) {
+    public MyRecyclerViewAdapter2(List<BoardData> dataModelArrayList, Context context) {
         this.dataModelArrayList = dataModelArrayList;
+        Log.d(TAG, String.valueOf(dataModelArrayList));
         this.context = context;
         // 어댑터에서 액티비티 액션을 가져올 때 context가 필요한데 어댑터에는 context가 없다.
         // 선택한 액티비티에 대한 context를 가져올 때 필요하다.
@@ -43,7 +43,7 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
     // 이 부분에서 super를 통해 상속을 받았다.
     // 이 RecyclerView 에 뷰 holder 에서 상속을 받아서 거기에 아이템 값을 찾아와야 한다.
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView tvTitleCV, tvDateCV, tvContentsCV, tvNickNameCV, tvHitCV, tvCommentCount, tvCategoryCV;
+        public TextView tvTitleCV, tvDateCV, tvContentsCV, tvNickNameCV, tvHitCV, tvCommentCount;
         public ImageView ivImageCV;
         public ImageButton ibLike;
 
@@ -51,52 +51,17 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
         public MyViewHolder(View view) {
             super(view);
             this.ivImageCV = (ImageView) view.findViewById(R.id.ivImageCV);
-            this.tvCategoryCV = (TextView) view.findViewById(R.id.tvCategoryCV);
             this.tvTitleCV = (TextView) view.findViewById(R.id.tvTitleCV);
             this.tvContentsCV = (TextView) view.findViewById(R.id.tvContentsCV);
             this.tvNickNameCV = (TextView) view.findViewById(R.id.tvNickNameCV);
             this.tvHitCV = (TextView) view.findViewById(R.id.tvHitCV);
             this.tvCommentCount = (TextView) view.findViewById(R.id.tvCommentCount);
             this.tvDateCV = (TextView) view.findViewById(R.id.tvDateCV);
+            this.ibLike = (ImageButton)view.findViewById(R.id.ibLike);
 
             // 리사이클러뷰의 각 아이템을 재사용하는 MyViewHolder 에서 각 아이템에 대한 클릭 리스너를 달 수 있다. : 필요시 사용
             // MyViewHolder 가 리사이클러뷰의 각 뷰 항목을 만드는 역할을 하기 때문에, 여기서 작업을 해야한다.
-            view.setClickable(true);
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    pos = getAdapterPosition();
 
-                    if (pos != RecyclerView.NO_POSITION) {
-
-                        // 데이터 리스트로부터 아이템 데이터 참조.
-                        DataModel item = dataModelArrayList.get(pos);
-
-                        getContentsNum = item.getContentsNum();
-                        String getSection = item.getSection();
-                        String getCategory = item.getCategory();
-                        String getTitle = item.getTitle();
-                        String getNickName = item.getNickName();
-                        String getContents = item.getContents();
-                        Bitmap getImage = item.getImage();
-                        String getDate = item.getDate();
-                        String getEmail = item.getEmail();
-
-                        // 클릭한 리사이클러뷰의 내용을 인텐트에 담아서 이동할액티비티로 간다.
-                        Intent intent = new Intent(context, FragmentPage2.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.putExtra("getContentsNum", getContentsNum);
-                        intent.putExtra("getSection", getSection);
-                        intent.putExtra("getCategory", getCategory);
-                        intent.putExtra("getTitle", getTitle);
-                        intent.putExtra("getNickName", getNickName);
-                        intent.putExtra("getContents", getContents);
-                        intent.putExtra("getImage", getImage);
-                        intent.putExtra("getDate", getDate);
-                        intent.putExtra("getEmail", getEmail);
-                        context.startActivity(intent);
-                    }
-                }
-            });
         }
     }
 
@@ -125,15 +90,14 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
         // 각 위치에 문자열 세팅
         // 객체가 있는 배열에 담아서 어댑터 쪽으로 쏜다. 그걸 onBindViewHolder 가 받아서 Glide가 load하는 형태이다.
 
-        DataModel dataModelPosition = dataModelArrayList.get(position); // 데이터 리스트 객체에서 어떤거 가져올지 위치로 추출
-        holder.tvCategoryCV.setText(dataModelPosition.getCategory());
+        BoardData dataModelPosition = dataModelArrayList.get(position); // 데이터 리스트 객체에서 어떤거 가져올지 위치로 추출
+        Log.d(TAG,dataModelPosition.getContents());
         holder.tvTitleCV.setText(dataModelPosition.getTitle());
         holder.tvContentsCV.setText(dataModelPosition.getContents());
         holder.tvNickNameCV.setText(dataModelPosition.getNickName());
         holder.tvHitCV.setText(dataModelPosition.getHit());
         holder.tvCommentCount.setText(dataModelPosition.getComment());
         holder.tvDateCV.setText(dataModelPosition.getDate());
-        holder.tvCommentCount.setText(dataModelPosition.getComment());
 
         context = holder.itemView.getContext();
 
@@ -148,7 +112,7 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
         // Glide : 작성하면 이미지 load가 가능해진다. holder시 삽입될 것이다.
         // override() : 해당 사이즈로 이미지를 늘리거나 줄이는 것.
         // fitCenter() : 해당 이미지뷰의 크기가 지정되어 있을 경우 이미지 뷰의 크기에 이미지를 맞추는 것
-        Glide.with(context).load(dataModelArrayList.get(position).getImage()).fitCenter().into(holder.ivImageCV);
+        //Glide.with(context).load(dataModelArrayList.get(position)).fitCenter().into(holder.ivImageCV);
     }
 
     // 몇개의 데이터를 리스트로 뿌려줘야하는지 반드시 정의해줘야한다

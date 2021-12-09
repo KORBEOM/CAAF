@@ -10,16 +10,16 @@ public class BoardData {
     private String title;
 
     @SerializedName("content")
-    private String content;
+    private String Contents;
 
     @SerializedName("id")
-    private String userid;
+    private String NickName;
 
     @SerializedName("date")
-    private String date;
+    private String Date;
 
     @SerializedName("hit")
-    private int hit;
+    private String hit;
 
     @SerializedName("comment")
     private String comment;
@@ -29,9 +29,9 @@ public class BoardData {
         return "BoardData{" +
                 "number=" + number +
                 ", title='" + title + '\'' +
-                ", content='" + content +'\'' +
-                ", id='" + userid +'\'' +
-                ", date='" + date +'\'' +
+                ", content='" + Contents +'\'' +
+                ", Nickname='" + NickName +'\'' +
+                ", Date='" + Date +'\'' +
                 ", comment=" + comment +'\''+
                 ", hit=" + hit + '}';
 
@@ -43,16 +43,16 @@ public class BoardData {
     public String getTitle(){
         return this.title;
     }
-    public String getContent(){
-        return this.content;
+    public String getContents(){
+        return this.Contents;
     }
-    public String getUserid(){
-        return this.userid;
+    public String getNickName(){
+        return this.NickName;
     }
     public String getDate(){
-        return this.date;
+        return this.Date;
     }
-    public int getHit(){
+    public String getHit(){
         return this.hit;
     }
     public String getComment() {

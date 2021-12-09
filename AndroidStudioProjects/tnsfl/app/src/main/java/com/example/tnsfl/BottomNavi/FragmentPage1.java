@@ -14,7 +14,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.tnsfl.CafeInfo;
-import com.example.tnsfl.MyAdapter;
+import com.example.tnsfl.Adapter.MyAdapter;
 import com.example.tnsfl.R;
 
 import me.relex.circleindicator.CircleIndicator3;
@@ -25,6 +25,7 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
     private FragmentStateAdapter pagerAdapter;
     private int num_page = 4;
     private CircleIndicator3 mIndicator;
+
 
     LinearLayout widget1,widget2,widget3,widget4,widget5,widget6,widget7,widget8,widget9,widget10,widget11,widget12;
 

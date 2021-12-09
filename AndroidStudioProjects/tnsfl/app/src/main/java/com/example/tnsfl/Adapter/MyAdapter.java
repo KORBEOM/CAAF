@@ -1,4 +1,4 @@
-package com.example.tnsfl;
+package com.example.tnsfl.Adapter;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;

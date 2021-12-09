@@ -77,13 +77,16 @@
         <entry key="..\:/Users/USER/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_dropdown_item_1line.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_main.xml" value="0.1480978260869565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/activity_sub1.xml" value="0.1480978260869565" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_1.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/cafe_infomation.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/cafe_itemview.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_1.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_2.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_3.xml" value="0.1431159420289855" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/fragment_page_4.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_1p.xml" value="0.359375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_2p.xml" value="0.359375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/frame_3p.xml" value="0.359375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CAAF/AndroidStudioProjects/tnsfl/app/src/main/res/layout/item_cardview.xml" value="0.4466666666666667" />
       </map>
     </option>
   </component>
