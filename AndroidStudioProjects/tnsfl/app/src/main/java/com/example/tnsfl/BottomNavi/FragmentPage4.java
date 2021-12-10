@@ -15,6 +15,7 @@ import com.example.tnsfl.CustomDialog;
 import com.example.tnsfl.R;
 
 
+<<<<<<< Updated upstream
 
 public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
@@ -22,6 +23,8 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
 
 
+=======
+>>>>>>> Stashed changes
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

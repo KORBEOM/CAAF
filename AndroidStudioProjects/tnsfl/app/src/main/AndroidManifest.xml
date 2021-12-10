@@ -16,7 +16,7 @@
         android:label="Cafe In"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tnsfl" >
-
+        <activity android:name=".CafeDetail"/>
         <activity android:name=".CafeInfo"/>
         <activity
             android:name=".MainActivity"
