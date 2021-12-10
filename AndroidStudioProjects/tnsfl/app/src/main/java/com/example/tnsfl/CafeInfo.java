@@ -1,5 +1,6 @@
 package com.example.tnsfl;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ public class CafeInfo extends AppCompatActivity {
     private Context context;
     private static final String TAG = "cafedatadata";
     private BoardService service1;
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,7 +120,7 @@ public class CafeInfo extends AppCompatActivity {
                     cafeData = response.body();
                     Log.d(TAG, "onResponse:성공, 결과 \n" + cafeData);
 
-                    CafeRecyclerAdapter adapter = new CafeRecyclerAdapter( context,cafeData );
+                    CafeRecyclerAdapter adapter = new CafeRecyclerAdapter( context,cafeData, CafeInfo.this);
                     recyclerView.setAdapter(adapter);
                 } else {
 

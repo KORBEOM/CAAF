@@ -1,7 +1,11 @@
 package com.example.tnsfl.Adapter;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.app.Activity;
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tnsfl.CafeDetail;
 import com.example.tnsfl.DataSet.CafeItem;
 import com.example.tnsfl.R;
 import android.view.View;
@@ -25,10 +30,12 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
     private Context context;
     private List<CafeItem> items;
     private static final String TAG = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    private Activity activity;
 
-    public CafeRecyclerAdapter(Context context, List<CafeItem> items){
+    public CafeRecyclerAdapter(Context context, List<CafeItem> items , Activity activity){
         this.context = context;
         this.items = items;
+        this.activity = activity;
     }
 
     @Override
@@ -50,9 +57,14 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
             public void onClick(View view) {
                 Log.d(TAG,item.getTitle());
                 Toast.makeText(view.getContext(), item.getTitle(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(activity,CafeDetail.class);
+                intent.putExtra("categorie" , item.getCategorie());
+                activity.startActivity(intent);
             }
         });
     }
+
+
 
     @Override
     public int getItemCount() {
