@@ -376,10 +376,6 @@
         android:orientation="vertical"
         >
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -393,24 +389,15 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:scaleType="fitXY" />
 
-<<<<<<< Updated upstream
-=======
-        <me.relex.circleindicator.CircleIndicator3
-            android:id="@+id/indicator"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1" />
->>>>>>> Stashed changes
+
 
 
     </LinearLayout>
