@@ -16,13 +16,19 @@ import androidx.fragment.app.Fragment;
 import com.example.tnsfl.R;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f5c7d4cdd56d64cf55a19a9bcd8cd569b9f0c3c5
 public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
     TextView fr4_tx1,fr4_tx2,fr4_tx3,fr4_tx4;
     Dialog customdialog,customdialog2,customdialog3,customdialog4;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f5c7d4cdd56d64cf55a19a9bcd8cd569b9f0c3c5
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
