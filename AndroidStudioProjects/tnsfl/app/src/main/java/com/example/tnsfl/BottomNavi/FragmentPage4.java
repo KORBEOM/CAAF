@@ -1,30 +1,28 @@
 package com.example.tnsfl.BottomNavi;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.tnsfl.CustomDialog;
 import com.example.tnsfl.R;
 
 
-<<<<<<< Updated upstream
 
 public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
     TextView fr4_tx1,fr4_tx2,fr4_tx3,fr4_tx4;
+    Dialog customdialog,customdialog2,customdialog3,customdialog4;
 
 
-
-=======
->>>>>>> Stashed changes
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,18 +30,49 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_page_4, container, false);
 
 
+        customdialog = new Dialog(getActivity());
+        customdialog2 = new Dialog(getActivity());
+        customdialog3 = new Dialog(getActivity());
+        customdialog4 = new Dialog(getActivity());
 
-        fr4_tx1 = (TextView)view.findViewById(R.id.frg4_tx1);
-        fr4_tx2 = (TextView)view.findViewById(R.id.frg4_tx2);
-        fr4_tx3 = (TextView)view.findViewById(R.id.frg4_tx3);
-        fr4_tx4 = (TextView)view.findViewById(R.id.frg4_tx4);
+        customdialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        customdialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        customdialog3.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        customdialog4.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        customdialog.setContentView(R.layout.customdialog);
+        customdialog2.setContentView(R.layout.customdialog2);
+        customdialog3.setContentView(R.layout.customdialog3);
+        customdialog4.setContentView(R.layout.customdialog4);
+
+
+        view.findViewById(R.id.frg4_tx1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showcustomDialog();
+            }
+        });
+        view.findViewById(R.id.frg4_tx2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showcustomDialog2();
+            }
+        });
+        view.findViewById(R.id.frg4_tx3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showcustomDialog3();
+            }
+        });
+        view.findViewById(R.id.frg4_tx4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showcustomDialog4();
+            }
+        });
 
 
 
-        fr4_tx1.setOnClickListener(this::onClick);
-        fr4_tx2.setOnClickListener(this::onClick);
-        fr4_tx3.setOnClickListener(this::onClick);
-        fr4_tx4.setOnClickListener(this::onClick);
 
 
 
@@ -53,7 +82,58 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
     }
 
+    public void showcustomDialog(){
+        customdialog.show();
 
+        Button btnCancle1 = customdialog.findViewById(R.id.btnCancle1);
+        btnCancle1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                customdialog.dismiss(); // 다이얼로그 닫기
+            }
+        });
+
+
+    }
+    public void showcustomDialog2(){
+        customdialog2.show();
+
+
+        Button btnCancle2 = customdialog2.findViewById(R.id.btnCancle2);
+        btnCancle2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                customdialog2.dismiss(); // 다이얼로그 닫기
+            }
+        });
+
+    }
+    public void showcustomDialog3(){
+        customdialog3.show();
+
+        Button btnCancle3 = customdialog3.findViewById(R.id.btnCancle3);
+        btnCancle3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                customdialog3.dismiss(); // 다이얼로그 닫기
+            }
+        });
+    }
+    public void showcustomDialog4(){
+        customdialog4.show();
+
+        Button btnCancle4 = customdialog4.findViewById(R.id.btnCancle4);
+        btnCancle4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                customdialog4.dismiss(); // 다이얼로그 닫기
+            }
+        });
+    }
 
 
     @Override
@@ -63,28 +143,12 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
 
-            case R.id.frg4_tx1:Toast toast = Toast.makeText(getContext(), "gerrard218@gmail.com", Toast.LENGTH_SHORT);
-                toast.show();
-
-            case R.id.frg4_tx2:
-                Toast toast1 = Toast.makeText(getContext(), "버전 2.01", Toast.LENGTH_SHORT);
-                toast1.show();
-                break;
-            case R.id.frg4_tx3:
-                Toast toast2 = Toast.makeText(getContext(), "저희 카페인 앱은 카페 정보,위치등을 공유 할 수 있는 앱입니다.", Toast.LENGTH_SHORT);
-                toast2.show();
-                break;
-            case R.id.frg4_tx4:
-                CustomDialog dlg = new CustomDialog(getActivity());
-                dlg.show();
-                break;
-
-        }
 
 
 
     }
+
+
 }
 

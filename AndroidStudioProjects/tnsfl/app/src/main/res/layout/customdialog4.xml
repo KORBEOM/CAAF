@@ -4,7 +4,7 @@
     android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
-    android:layout_height="200dp">
+    android:layout_height="250dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,15 +22,16 @@
             android:fontFamily="@font/kokomi"
             android:layout_weight="1"/>
         <TextView
+            android:textSize="20dp"
             android:id="@+id/put_text"
             android:layout_margin="10dp"
-            android:text="gerrard218@gmail.com"
-            android:fontFamily="@font/kokomi"
-            android:textSize="20dp"
             android:textColor="@color/black"
             android:layout_width="match_parent"
+            android:fontFamily="@font/kokomi"
             android:layout_height="0dp"
-            android:layout_weight="1.7"/>
+            android:layout_weight="1.8"
+            android:text="홈 화면의 위젯을 누르면 카페 정도들을 알 수 있고 정보를 공유 할 수 있는 공간과
+지도를 이용해 카페 위치를 찾을 수 있다."/>
         <LinearLayout
             android:layout_marginRight="12dp"
             android:layout_width="wrap_content"
@@ -41,7 +42,7 @@
             <Button
                 android:text="취소"
                 android:textSize="10dp"
-                android:id="@+id/btnCancle1"
+                android:id="@+id/btnCancle4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:scaleType="center"/>
