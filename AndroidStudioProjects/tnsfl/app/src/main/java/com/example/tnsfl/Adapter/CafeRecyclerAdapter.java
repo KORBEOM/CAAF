@@ -50,8 +50,9 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
         Log.d(TAG,item.getTitle());
         holder.image.setImageBitmap(item.getImage());
         holder.title.setText(item.getTitle());
-        holder.content.setText(item.getPhone());
-        holder.comment.setText(item.getCategorie());
+        holder.phone.setText(item.getPhone());
+        holder.oldaddress.setText(item.getLocation());
+        holder.newaddress.setText(item.getLocation2());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,16 +80,18 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
 
         ImageView image;
         TextView title;
-        TextView content;
-        TextView comment;
+        TextView phone;
         CardView cardView;
+        TextView oldaddress;
+        TextView newaddress;
 
         public ViewHolder(View itemView){
             super(itemView);
             image = (ImageView)itemView.findViewById(R.id.cafe_logo);
             title = (TextView)itemView.findViewById(R.id.cafe_title);
-            content = (TextView)itemView.findViewById(R.id.cafe_content);
-            comment = (TextView) itemView.findViewById(R.id.cafe_comment);
+            phone = (TextView) itemView.findViewById(R.id.cafe_phone);
+            oldaddress = (TextView)itemView.findViewById(R.id.oldaddress);
+            newaddress = (TextView)itemView.findViewById(R.id.newaddress);
             cardView = (CardView) itemView.findViewById(R.id.cafe_total);
         }
 

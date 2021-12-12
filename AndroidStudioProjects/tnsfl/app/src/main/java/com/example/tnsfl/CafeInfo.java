@@ -3,6 +3,7 @@ package com.example.tnsfl;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -48,6 +49,7 @@ public class CafeInfo extends AppCompatActivity {
 
         Backbtn = (ImageView)findViewById(R.id.backBtn);
         recyclerView = (RecyclerView)findViewById(R.id.cafe_recycle1);
+        recyclerView.addItemDecoration(new RecyclerViewDecoration(50));
 
         Backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +60,7 @@ public class CafeInfo extends AppCompatActivity {
         });
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://121.156.236.13:3000/")
+                .baseUrl("http://ec2-3-35-141-102.ap-northeast-2.compute.amazonaws.com:9000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -133,6 +135,24 @@ public class CafeInfo extends AppCompatActivity {
                 Log.d(TAG, "onFailure:" + t.getMessage());
             }
         });
+
     }
+    public class RecyclerViewDecoration extends RecyclerView.ItemDecoration {
+
+        private final int divHeight;
+
+        public RecyclerViewDecoration(int divHeight)
+        {
+            this.divHeight = divHeight;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state)
+        {
+            super.getItemOffsets(outRect, view, parent, state);
+            outRect.top = divHeight;
+        }
+    }
+
 }
 
