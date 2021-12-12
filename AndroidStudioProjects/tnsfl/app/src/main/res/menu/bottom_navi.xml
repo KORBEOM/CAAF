@@ -17,6 +17,6 @@
     <item
         android:id="@+id/navigation_4"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="마이페이지"/>
+        android:title="환경설정"/>
 
 </menu>

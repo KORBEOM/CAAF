@@ -17,19 +17,19 @@
             android:layout_height="0dp"
             android:textColor="#000"
             android:layout_margin="5dp"
+            android:fontFamily="@font/kokomi"
             android:text="Cafe in"
             android:textSize="30dp"
-            android:fontFamily="@font/kokomi"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/put_text"
             android:layout_margin="10dp"
-            android:text="gerrard218@gmail.com"
             android:fontFamily="@font/kokomi"
-            android:textSize="20dp"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:text="버전 정보 2"
+            android:textSize="20dp"
             android:layout_weight="1.7"/>
         <LinearLayout
             android:layout_marginRight="12dp"
@@ -41,10 +41,11 @@
             <Button
                 android:text="취소"
                 android:textSize="10dp"
-                android:id="@+id/btnCancle1"
+                android:id="@+id/btnCancle2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:scaleType="center"/>
+
 
         </LinearLayout>
 
