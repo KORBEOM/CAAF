@@ -79,7 +79,7 @@ public class FragmentPage2 extends Fragment  {
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.105:3000/")
+                .baseUrl("http://121.156.236.13:3000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -59,6 +59,10 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
                 Toast.makeText(view.getContext(), item.getTitle(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity,CafeDetail.class);
                 intent.putExtra("categorie" , item.getCategorie());
+                intent.putExtra("cafeName" , item.getTitle());
+                intent.putExtra("cafePhone" , item.getPhone());
+                intent.putExtra("cafeOld" , item.getLocation());
+                intent.putExtra("cafeNew",item.getLocation2());
                 activity.startActivity(intent);
             }
         });
