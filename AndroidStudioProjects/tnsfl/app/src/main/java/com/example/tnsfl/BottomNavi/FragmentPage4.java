@@ -16,11 +16,19 @@ import androidx.fragment.app.Fragment;
 import com.example.tnsfl.R;
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
     TextView fr4_tx1,fr4_tx2,fr4_tx3,fr4_tx4;
     Dialog customdialog,customdialog2,customdialog3,customdialog4;
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
