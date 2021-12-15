@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.tnsfl.Adapter.RecyclerViewDecoration;
 import com.example.tnsfl.Adapter.marketAdapter;
 import com.example.tnsfl.DataSet.BoardData;
 import com.example.tnsfl.DataSet.Boardexist;
@@ -45,7 +46,7 @@ public class FragmentPage2 extends Fragment  {
     private RecyclerView recyclerView2;
     private RecyclerView.LayoutManager layoutManager;
     private List<BoardData> dataModelArrayList ;
-    private List<marketData> MarketdataList;
+    private List<marketData> MarketdataList = new ArrayList<>();
     private RecyclerView.Adapter adapter;
 
     marketData one = new marketData("행복한 분위기를 가짐" , "그리운 느낌은 가짐" , "언제나 웃음이 가득한");
@@ -57,17 +58,13 @@ public class FragmentPage2 extends Fragment  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_page_2);
 
-
-
             }
-
-
 
 
     private void setContentView(int fragment_page_1) {
     }
 
-    private static final String TAG = "goooooo";
+    private static final String TAG = "gooooooggggggggggggggggggggggggggggggggggggg";
 
     @Nullable
     @Override
@@ -78,19 +75,25 @@ public class FragmentPage2 extends Fragment  {
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
-        Log.d(TAG,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         MarketdataList.add(one);
-        Log.d(TAG,"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
         MarketdataList.add(two);
 
+        Log.d(TAG, String.valueOf(MarketdataList.size()));
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         recyclerView2 = view.findViewById(R.id.marketContent);
+        Log.d(TAG,"리싸이클러 확인");
+        recyclerView2.setHasFixedSize(true);
         marketAdapter Adapter2 = new marketAdapter(MarketdataList,getActivity());
+        recyclerView2.addItemDecoration(new RecyclerViewDecoration(30 ,"width"));
         recyclerView2.setAdapter(Adapter2);
+
+        RecyclerView.LayoutManager layoutManager2 = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);
+        recyclerView2.setLayoutManager(layoutManager2);
+        recyclerView2.setItemAnimator(new DefaultItemAnimator());
 
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -112,6 +115,7 @@ public class FragmentPage2 extends Fragment  {
                     Log.d(TAG, "onResponse:성공, 결과 \n" + dataModelArrayList.get(0));
 
                     MyRecyclerViewAdapter2 adapter = new MyRecyclerViewAdapter2(dataModelArrayList, getContext());
+                    recyclerView.addItemDecoration(new RecyclerViewDecoration(30 , "height"));
                     recyclerView.setAdapter(adapter);
                 } else {
 

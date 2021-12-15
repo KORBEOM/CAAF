@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tnsfl.Adapter.CafeRecyclerAdapter;
 import com.example.tnsfl.Adapter.MyRecyclerViewAdapter2;
+import com.example.tnsfl.Adapter.RecyclerViewDecoration;
 import com.example.tnsfl.DataSet.BoardData;
 import com.example.tnsfl.DataSet.Boardexist;
 import com.example.tnsfl.DataSet.CafeItem;
@@ -49,7 +50,7 @@ public class CafeInfo extends AppCompatActivity {
 
         Backbtn = (ImageView)findViewById(R.id.backBtn);
         recyclerView = (RecyclerView)findViewById(R.id.cafe_recycle1);
-        recyclerView.addItemDecoration(new RecyclerViewDecoration(30));
+        recyclerView.addItemDecoration(new RecyclerViewDecoration(30 , "height") );
 
         Backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,27 +138,7 @@ public class CafeInfo extends AppCompatActivity {
         });
 
     }
-    public class RecyclerViewDecoration extends RecyclerView.ItemDecoration {
-        private final int divWidth;
 
-
-        public RecyclerViewDecoration(int divWidth)
-        {
-            this.divWidth = divWidth;
-        }
-
-        @Override
-        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state)
-        {
-            super.getItemOffsets(outRect, view, parent, state);
-
-
-            outRect.bottom=divWidth;
-            outRect.left= divWidth;
-
-        }
-
-    }
 
 
 }

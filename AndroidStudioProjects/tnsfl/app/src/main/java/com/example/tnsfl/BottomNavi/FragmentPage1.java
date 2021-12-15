@@ -73,29 +73,6 @@ public class FragmentPage1 extends Fragment implements View.OnClickListener {
         widget12.setOnClickListener(this::onClick);
 
 
-        mPager = view.findViewById(R.id.viewpager);
-        pagerAdapter = new MyAdapter(getActivity(), num_page);
-        mPager.setAdapter(pagerAdapter);
-        mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
-        mPager.setCurrentItem(1000); //시작 지점
-        mPager.setOffscreenPageLimit(4); //최대 이미지 수
-        mPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-                if (positionOffsetPixels == 0) {
-                    mPager.setCurrentItem(position);
-                }
-            }
-
-
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-
-            }
-        });
-
         return view;
     }
 

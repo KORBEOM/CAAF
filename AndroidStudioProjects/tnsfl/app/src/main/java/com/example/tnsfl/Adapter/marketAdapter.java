@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,11 +25,12 @@ import java.util.List;
 public class marketAdapter extends RecyclerView.Adapter<marketAdapter.ViewHolder> {
 
     private List<marketData> items;
-    private static final String TAG = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    private static final String TAG = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb";
     private Activity activity;
 
     public marketAdapter( List<marketData> items , Activity activity){
         this.items = items;
+        Log.d(TAG, String.valueOf(items.get(0).getTag1()));
         this.activity = activity;
     }
 

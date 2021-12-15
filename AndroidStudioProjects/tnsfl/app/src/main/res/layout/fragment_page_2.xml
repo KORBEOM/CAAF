@@ -20,9 +20,10 @@
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
-           android:layout_weight="0.3">
+           android:layout_weight="0.4">
 
            <TextView
+               android:layout_marginLeft="10dp"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:text="카페홍보글"
@@ -35,6 +36,10 @@
            android:layout_height="0dp"
            android:layout_weight="2"
            android:orientation="vertical"
+           android:background="@drawable/whitebackground"
+           android:paddingTop="10dp"
+           android:paddingLeft="10dp"
+           android:paddingRight="10dp"
            >
 
 
@@ -42,6 +47,7 @@
                android:id="@+id/marketContent"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
+               android:orientation="horizontal"
                app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
                app:layout_constraintHorizontal_bias="0.0"
@@ -58,7 +64,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="4"
         android:orientation="vertical"
         android:layout_margin="15dp">
         <LinearLayout
