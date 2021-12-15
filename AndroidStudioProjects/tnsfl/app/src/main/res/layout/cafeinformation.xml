@@ -66,15 +66,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:text="카페 이름: 가나다카페"
-                android:textSize="20dp"></TextView>
+                android:autoSizeTextType="uniform"></TextView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="10dp"
-                android:text="카페 종류: 일반 카페"
-                android:textSize="15dp"></TextView>
 
         </LinearLayout>
 
@@ -89,10 +82,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:text="카페 종류: 일반 카페"
+                android:textSize="15dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:text="전화 번호 : 010-0101-0101"
-                android:textSize="20dp"></TextView>
+                android:autoSizeTextType="uniform"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="지번: 가 나 다 라 마 바 사 아 자 차 카 타 파 하 하"
-                android:textSize="19dp"></TextView>
+                android:autoSizeTextType="uniform"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="도로명: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"
-                android:textSize="19dp"></TextView>
+                android:autoSizeTextType="uniform"></TextView>
         </LinearLayout>
 
     </LinearLayout>

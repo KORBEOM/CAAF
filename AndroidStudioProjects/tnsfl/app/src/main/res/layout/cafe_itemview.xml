@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cafe_total"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="500dp"
         card_view:cardBackgroundColor="@color/baigee"
         card_view:cardCornerRadius="5dp"
@@ -21,7 +21,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
-            android:layout_width="391dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/layout_round"
             android:orientation="horizontal">
@@ -46,8 +46,10 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeMinTextSize="10sp"
                 android:autoSizeTextType="uniform"
-                android:gravity="center"
+                android:gravity="center_vertical"
                 android:text="041-1234-5678"
                 android:textSize="18sp"
                 card_view:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +64,7 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="스타벅스 백석대점"
+                android:textColor="@color/black"
                 android:textSize="25sp"
                 card_view:layout_constraintBottom_toTopOf="@+id/cafe_logo"
                 card_view:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +75,7 @@
 
             <TextView
                 android:id="@+id/newaddress"
-                android:layout_width="204dp"
+                android:layout_width="200dp"
                 android:layout_height="46dp"
                 android:layout_marginLeft="20dp"
                 android:gravity="center_vertical"
@@ -89,6 +92,8 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
                 android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="15sp"
                 android:gravity="center_vertical"
                 android:text="asdasd"
                 android:textSize="13sp"

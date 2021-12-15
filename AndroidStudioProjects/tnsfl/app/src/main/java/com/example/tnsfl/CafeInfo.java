@@ -49,7 +49,7 @@ public class CafeInfo extends AppCompatActivity {
 
         Backbtn = (ImageView)findViewById(R.id.backBtn);
         recyclerView = (RecyclerView)findViewById(R.id.cafe_recycle1);
-        recyclerView.addItemDecoration(new RecyclerViewDecoration(50));
+        recyclerView.addItemDecoration(new RecyclerViewDecoration(30));
 
         Backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,21 +138,27 @@ public class CafeInfo extends AppCompatActivity {
 
     }
     public class RecyclerViewDecoration extends RecyclerView.ItemDecoration {
+        private final int divWidth;
 
-        private final int divHeight;
 
-        public RecyclerViewDecoration(int divHeight)
+        public RecyclerViewDecoration(int divWidth)
         {
-            this.divHeight = divHeight;
+            this.divWidth = divWidth;
         }
 
         @Override
         public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state)
         {
             super.getItemOffsets(outRect, view, parent, state);
-            outRect.top = divHeight;
+
+
+            outRect.bottom=divWidth;
+            outRect.left= divWidth;
+
         }
+
     }
+
 
 }
 

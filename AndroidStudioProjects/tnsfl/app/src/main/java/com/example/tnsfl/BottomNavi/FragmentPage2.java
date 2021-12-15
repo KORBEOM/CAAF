@@ -15,12 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.tnsfl.Adapter.marketAdapter;
 import com.example.tnsfl.DataSet.BoardData;
 import com.example.tnsfl.DataSet.Boardexist;
+import com.example.tnsfl.DataSet.marketData;
 import com.example.tnsfl.Interface.BoardService;
 import com.example.tnsfl.Adapter.MyRecyclerViewAdapter2;
 import com.example.tnsfl.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import VIewpager_2frg.ViewPagerAdapter;
@@ -39,9 +42,14 @@ public class FragmentPage2 extends Fragment  {
     private FragmentStateAdapter pagerAdapter;
     private int num_page = 4;
     private RecyclerView recyclerView;
+    private RecyclerView recyclerView2;
     private RecyclerView.LayoutManager layoutManager;
     private List<BoardData> dataModelArrayList ;
+    private List<marketData> MarketdataList;
     private RecyclerView.Adapter adapter;
+
+    marketData one = new marketData("행복한 분위기를 가짐" , "그리운 느낌은 가짐" , "언제나 웃음이 가득한");
+    marketData two = new marketData("우울하고 무서운" , "정겨운 냄새" , "어둠의 자식");
 
 
     @Override
@@ -70,12 +78,19 @@ public class FragmentPage2 extends Fragment  {
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
+        Log.d(TAG,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        MarketdataList.add(one);
+        Log.d(TAG,"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        MarketdataList.add(two);
+
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-
+        recyclerView2 = view.findViewById(R.id.marketContent);
+        marketAdapter Adapter2 = new marketAdapter(MarketdataList,getActivity());
+        recyclerView2.setAdapter(Adapter2);
 
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -109,29 +124,6 @@ public class FragmentPage2 extends Fragment  {
                 Log.d(TAG, "onFailure:" + t.getMessage());
             }
         });
-
-
-
-        mPager = view.findViewById(R.id.viewpager22);
-        pagerAdapter = new ViewPagerAdapter(getActivity(),num_page);
-        mPager.setAdapter(pagerAdapter);
-        mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
-        mPager.setCurrentItem(1000); //시작 지점
-        mPager.setOffscreenPageLimit(4); //최대 이미지 수
-        mPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-                if (positionOffsetPixels == 0) {
-                    mPager.setCurrentItem(position);
-                }
-            }
-
-
-        });
-
-
-
 
 
         return view;

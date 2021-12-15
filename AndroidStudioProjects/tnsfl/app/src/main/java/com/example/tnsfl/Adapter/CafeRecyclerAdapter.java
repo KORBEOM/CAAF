@@ -48,7 +48,7 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         CafeItem item = items.get(position);
         Log.d(TAG,item.getTitle());
-        holder.image.setImageBitmap(item.getImage());
+        //holder.image.setImageBitmap(item.getImage());
         holder.title.setText(item.getTitle());
         holder.phone.setText(item.getPhone());
         holder.oldaddress.setText(item.getLocation());
