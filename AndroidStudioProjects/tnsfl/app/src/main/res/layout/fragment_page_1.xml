@@ -43,7 +43,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/cufu"
                     />
@@ -69,7 +69,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/catoon" />
 
@@ -94,7 +94,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/vrgame1" />
 
@@ -127,7 +127,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/kids" />
 
@@ -153,7 +153,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/study" />
 
@@ -178,7 +178,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/board" />
 
@@ -211,7 +211,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/catdog" />
 
@@ -236,7 +236,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/fish" />
 
@@ -262,7 +262,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/making" />
 
@@ -296,7 +296,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/room" />
 
@@ -322,7 +322,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/escape" />
 
@@ -347,7 +347,7 @@
                 <ImageView
 
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:src="@drawable/trandition" />
 
@@ -367,38 +367,4 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:layout_weight="1.7"
-        android:background="@drawable/layout_round"
-        android:orientation="vertical"
-        >
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:scaleType="fitXY" />
-
-
-
-    </LinearLayout>
-</LinearLayout>
 </LinearLayout>

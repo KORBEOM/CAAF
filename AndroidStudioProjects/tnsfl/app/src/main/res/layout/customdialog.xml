@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@color/pick5"
+    android:background="#DBF6BB"
     android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
@@ -44,6 +44,7 @@
                 android:id="@+id/btnCancle1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#9CF6A0"
                 android:scaleType="center"/>
 
         </LinearLayout>
