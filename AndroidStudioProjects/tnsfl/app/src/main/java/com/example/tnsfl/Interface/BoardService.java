@@ -8,6 +8,7 @@ import com.example.tnsfl.DataSet.CafeItem;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -24,5 +25,10 @@ public interface BoardService {
     @GET("cafedata")
     Call<List<CafeItem>> getData(
             @Query("categorie") String categorie
+    );
+
+    @POST("boardsearch")
+    Call<List<BoardData>> getBoard(
+            @Query("title") String title
     );
 }
