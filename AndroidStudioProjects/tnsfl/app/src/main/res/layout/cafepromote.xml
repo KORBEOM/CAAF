@@ -13,7 +13,7 @@
 
         card_view:cardElevation="5dp">
         <LinearLayout
-            android:background="@drawable/green"
+            android:background="#FDF7C7"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
@@ -48,7 +48,7 @@
                     android:layout_height="100dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:background="@color/pick2"
+                    android:background="#FDF7C7"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"

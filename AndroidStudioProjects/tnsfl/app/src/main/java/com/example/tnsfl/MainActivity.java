@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentStateAdapter pagerAdapter;
     private FragmentPagerAdapter pagerAdapter2;
     private int num_page = 5;
-    private CircleIndicator3 mIndicator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

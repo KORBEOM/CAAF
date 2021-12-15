@@ -44,25 +44,25 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
         customdialog4.setContentView(R.layout.customdialog4);
 
 
-        view.findViewById(R.id.frg4_tx1).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.fr4_tx1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showcustomDialog();
             }
         });
-        view.findViewById(R.id.frg4_tx2).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.fr4_tx2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showcustomDialog2();
             }
         });
-        view.findViewById(R.id.frg4_tx3).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.fr4_tx3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showcustomDialog3();
             }
         });
-        view.findViewById(R.id.frg4_tx4).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.fr4_tx4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showcustomDialog4();

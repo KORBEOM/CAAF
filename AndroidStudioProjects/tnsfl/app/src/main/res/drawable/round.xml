@@ -5,7 +5,7 @@
     <solid android:color="@color/white" />
 
     <stroke
-        android:width="4dp"
+        android:width="3dp"
         android:color="@color/pick4" />
 </shape>
 
