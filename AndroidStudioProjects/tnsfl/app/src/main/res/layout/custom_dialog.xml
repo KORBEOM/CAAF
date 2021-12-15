@@ -3,7 +3,7 @@
     android:background="@drawable/whitebackground"
     android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="400dp"
+    android:layout_width="350dp"
     android:orientation="vertical"
     android:layout_height="400dp">
 
@@ -21,7 +21,7 @@
             android:fontFamily="@font/kokomi"
             android:textColor="@color/black"
             android:gravity="center"
-            android:layout_margin="10dp">
+            android:layout_marginLeft="15dp">
 
         </TextView>
     </LinearLayout>
@@ -39,29 +39,12 @@
             android:background="@drawable/frg4set"
             android:layout_margin="15dp"
             android:hint="제목"
-            android:id="@+id/dia_1"
+            android:id="@+id/titleDial"
             android:gravity="center"
             >
 
         </EditText>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        >
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/frg4set"
-            android:layout_margin="15dp"
-            android:hint="자신의 내용을 말해보세요."
-            android:gravity="center">
-        </EditText>
-
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -72,27 +55,77 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <EditText
+
+            <Spinner
+                android:id="@+id/categoriemenu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="15dp"
-                android:background="@drawable/frg4set">
+                android:background="@drawable/frg4set"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
 
-            </EditText>
+<!--            <EditText-->
+<!--                android:id="@+id/CategorieDial"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginBottom="15dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:hint="카테고리"-->
+<!--                android:paddingLeft="10dp"-->
+<!--                android:background="@drawable/frg4set">-->
+
+<!--            </EditText>-->
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="15dp"
-                android:background="@drawable/frg4set">
-            </EditText>
+            android:layout_weight="2">
+                <TextView
+                    android:id="@+id/cate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/frg4set"
+                    android:text="카테고리"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+            <!--            <EditText-->
+<!--                android:id="@+id/nickNameDial"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginBottom="15dp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:hint=""-->
+<!--                android:paddingLeft="10dp"-->
+<!--                android:background="@drawable/frg4set">-->
+<!--            </EditText>-->
+        </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        >
+        <EditText
+            android:id="@+id/contentDial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/frg4set"
+            android:layout_margin="15dp"
+            android:hint="자신의 내용을 말해보세요."
+            android:gravity="center">
+        </EditText>
+
     </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -107,22 +140,24 @@
      </LinearLayout>
 
         <Button
+            android:id="@+id/cancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="취소"
-            android:layout_margin="5dp"
+            android:layout_margin="15dp"
             android:backgroundTint="@color/pick3">
 
         </Button>
+
         <Button
+            android:id="@+id/addBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
+            android:layout_margin="15dp"
             android:backgroundTint="@color/pick3"
-            android:text="작성">
-        </Button>
+            android:text="작성"></Button>
     </LinearLayout>
 
     </LinearLayout>

@@ -34,7 +34,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cafefirst"
+                android:src="@drawable/waiting"
                 card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent"

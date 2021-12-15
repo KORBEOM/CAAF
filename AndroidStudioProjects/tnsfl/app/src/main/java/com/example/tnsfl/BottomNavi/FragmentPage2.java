@@ -6,9 +6,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +36,8 @@ import com.example.tnsfl.Interface.BoardService;
 import com.example.tnsfl.Adapter.MyRecyclerViewAdapter2;
 import com.example.tnsfl.Interface.kakaoApi;
 import com.example.tnsfl.R;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
@@ -51,6 +58,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FragmentPage2 extends Fragment  {
 
+    private Button newBtn;
     private ViewPager2 mPager;
     private FragmentStateAdapter pagerAdapter;
     private int num_page = 4;
@@ -62,6 +70,19 @@ public class FragmentPage2 extends Fragment  {
     MyRecyclerViewAdapter2 adapter;
     Dialog custom_dialog;
     AutoCompleteTextView autoCompleteTextView;
+    Dialog newDial;
+
+    Gson gson = new GsonBuilder()
+            .setLenient()
+            .create();
+
+    Retrofit retrofit = new Retrofit.Builder()
+            .baseUrl("http://ec2-3-35-141-102.ap-northeast-2.compute.amazonaws.com:9000/")
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build();
+
+    BoardService service1 = retrofit.create(BoardService.class);
+
 
     marketData one = new marketData("행복한 분위기를 가짐" , "그리운 느낌은 가짐" , "언제나 웃음이 가득한");
     marketData two = new marketData("우울하고 무서운" , "정겨운 냄새" , "어둠의 자식");
@@ -85,6 +106,18 @@ public class FragmentPage2 extends Fragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_page_2, container, false);
+
+        newBtn = (Button) view.findViewById(R.id.button_frg2);
+        newDial = new Dialog(getActivity());
+        newDial.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        newDial.setContentView(R.layout.custom_dialog);
+
+        newBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showcustomDialog();
+            }
+        });
 
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -111,19 +144,152 @@ public class FragmentPage2 extends Fragment  {
 
         autoCompleteTextView = (AutoCompleteTextView)view.findViewById(R.id.auto_search2);
 
+        responeBoard();
+
+        return view;
+    }
 
 
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://ec2-3-35-141-102.ap-northeast-2.compute.amazonaws.com:9000/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+    void searchKeyword(String keyword){
 
-        BoardService service1 = retrofit.create(BoardService.class);
+        recyclerView.removeAllViewsInLayout();
 
+
+        Call<List<BoardData>> call = service1.getBoard(keyword);
+
+        call.enqueue(new Callback<List<BoardData>>() {
+            @Override
+            public void onResponse(Call<List<BoardData>> call, Response<List<BoardData>> response) {
+
+                if(response.isSuccessful()) {
+                    List<BoardData> result = response.body();
+                    Log.d(TAG, "onResponse: 성공 , 결과 ," + result );
+                    adapter = new MyRecyclerViewAdapter2(result, getContext());
+                    recyclerView.setAdapter(adapter);
+                }
+                else{
+                    Log.d(TAG,"onResponse: 실패 " + response.body());
+                }
+            }
+
+
+
+            @Override
+            public void onFailure(Call<List<BoardData>> call, Throwable t) {
+                Log.d(TAG,"onFailure "+t.getMessage());
+            }
+        });
+
+
+    };
+    public void showcustomDialog(){
+        newDial.show();
+
+        String[] items = {"자유게시판" , "추천게시판" };
+
+        EditText title = (EditText)newDial.findViewById(R.id.titleDial);
+        Spinner categorie = (Spinner)newDial.findViewById(R.id.categoriemenu);
+        TextView cateName = (TextView)newDial.findViewById(R.id.cate);
+        EditText content = (EditText)newDial.findViewById(R.id.contentDial) ;
+
+        ArrayAdapter<String> adapterSpin = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item,items);
+        adapterSpin.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        categorie.setAdapter(adapterSpin);
+
+        categorie.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                cateName.setText(items[i]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                cateName.setText(null);
+            }
+        });
+
+        Button btnAdd = newDial.findViewById(R.id.addBtn);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(title.getText().toString().equalsIgnoreCase("")){
+                    Toast.makeText(getContext(), "글을 입력해주세요!!!", Toast.LENGTH_LONG).show();
+                }else if(content.getText().toString().equalsIgnoreCase("")){
+                    Toast.makeText(getContext(), "글을 입력해주세요!!!", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    String userId = "익명" ;
+
+                    recyclerView.removeAllViewsInLayout();
+                    Call<String> call = service1.setBoard(title.getText().toString(),cateName.getText().toString(),userId,content.getText().toString());
+
+                    call.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            if(response.isSuccessful()){
+                                String result = response.body();
+                                Log.d(TAG,result);
+                                Call<List<BoardData>> call1 = service1.getPosts();
+
+                                call1.enqueue(new Callback<List<BoardData>>() {
+                                    @Override
+                                    public void onResponse(Call<List<BoardData>> call, Response<List<BoardData>> response) {
+                                        if(response.isSuccessful()){
+                                            List<BoardData> result2 = response.body();
+                                            Log.d(TAG , "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+                                            adapter = new MyRecyclerViewAdapter2(result2, getContext());
+                                            recyclerView.setAdapter(adapter);
+                                            title.setText(null);
+                                            content.setText(null);
+                                            cateName.setText(null);
+                                            newDial.dismiss();
+                                        }else{
+                                            Log.d(TAG,"onResponse: 실패 " + response.body());
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<List<BoardData>> call, Throwable t) {
+                                        Log.d(TAG,"onFailure "+t.getMessage());
+                                    }
+                                });
+                            }else{
+                                Log.d(TAG,"onResponse: 실패 " + response.body());
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            Log.d(TAG,"onFailure aaaaaaaaaaaaaaaaaaaaaa"+t.getMessage());
+                        }
+                    });
+                }
+
+            }
+        });
+        Button btnCancle1 = newDial.findViewById(R.id.cancelBtn);
+        btnCancle1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                title.setText(null);
+                content.setText(null);
+                cateName.setText(null);
+                newDial.dismiss(); // 다이얼로그 닫기
+            }
+        });
+
+
+    }
+
+    public void responeBoard(){
         Call<List<BoardData>> call = service1.getPosts();
-        Call<List<Boardexist>> call2 = service1.getThings();
 
         call.enqueue(new Callback<List<BoardData>>() {
             @Override
@@ -168,60 +334,7 @@ public class FragmentPage2 extends Fragment  {
                 }
             };
         });
-
-
-        return view;
     }
-
-
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-    }
-
-    void searchKeyword(String keyword){
-
-        recyclerView.removeAllViewsInLayout();
-
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://ec2-3-35-141-102.ap-northeast-2.compute.amazonaws.com:9000/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-
-        BoardService service = retrofit.create(BoardService.class);
-
-        Call<List<BoardData>> call = service.getBoard(keyword);
-
-
-        call.enqueue(new Callback<List<BoardData>>() {
-            @Override
-            public void onResponse(Call<List<BoardData>> call, Response<List<BoardData>> response) {
-
-                if(response.isSuccessful()) {
-                    List<BoardData> result = response.body();
-                    Log.d(TAG, "onResponse: 성공 , 결과 ," + result );
-                    adapter = new MyRecyclerViewAdapter2(result, getContext());
-                    recyclerView.setAdapter(adapter);
-                }
-                else{
-                    Log.d(TAG,"onResponse: 실패 " + response.body());
-                }
-            }
-
-
-
-            @Override
-            public void onFailure(Call<List<BoardData>> call, Throwable t) {
-                Log.d(TAG,"onFailure "+t.getMessage());
-            }
-        });
-
-
-    };
-
 
 
 

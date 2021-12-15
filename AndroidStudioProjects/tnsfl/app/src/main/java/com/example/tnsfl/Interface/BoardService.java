@@ -31,4 +31,12 @@ public interface BoardService {
     Call<List<BoardData>> getBoard(
             @Query("title") String title
     );
+
+    @GET("boardData")
+    Call<String> setBoard(
+            @Query("title") String title,
+            @Query("categorie") String categorie,
+            @Query("id") String id,
+            @Query("content")  String content
+    );
 }
