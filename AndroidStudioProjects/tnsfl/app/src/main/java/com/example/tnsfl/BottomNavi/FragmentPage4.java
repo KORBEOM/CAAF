@@ -18,8 +18,9 @@ import com.example.tnsfl.R;
 
 public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
-    TextView fr4_tx1,fr4_tx2,fr4_tx3,fr4_tx4;
+    TextView fr4_tx1,fr4_tx2,fr4_tx3,fr4_tx4,textView9;
     Dialog customdialog,customdialog2,customdialog3,customdialog4;
+
 
     @Nullable
     @Override
@@ -42,6 +43,8 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
         customdialog2.setContentView(R.layout.customdialog2);
         customdialog3.setContentView(R.layout.customdialog3);
         customdialog4.setContentView(R.layout.customdialog4);
+
+
 
 
         view.findViewById(R.id.fr4_tx1).setOnClickListener(new View.OnClickListener() {

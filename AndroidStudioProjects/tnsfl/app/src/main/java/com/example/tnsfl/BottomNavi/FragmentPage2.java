@@ -1,5 +1,6 @@
 package com.example.tnsfl.BottomNavi;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -59,6 +60,7 @@ public class FragmentPage2 extends Fragment  {
     private List<BoardData> dataModelArrayList ;
     private List<marketData> MarketdataList = new ArrayList<>();
     MyRecyclerViewAdapter2 adapter;
+    Dialog custom_dialog;
     AutoCompleteTextView autoCompleteTextView;
 
     marketData one = new marketData("행복한 분위기를 가짐" , "그리운 느낌은 가짐" , "언제나 웃음이 가득한");
@@ -108,6 +110,7 @@ public class FragmentPage2 extends Fragment  {
         recyclerView2.setItemAnimator(new DefaultItemAnimator());
 
         autoCompleteTextView = (AutoCompleteTextView)view.findViewById(R.id.auto_search2);
+
 
 
 
