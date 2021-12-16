@@ -19,6 +19,7 @@
 
 
         <activity android:name=".LodingActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
 
             <intent-filter>
