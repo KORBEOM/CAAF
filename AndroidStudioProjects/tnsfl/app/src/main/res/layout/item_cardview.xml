@@ -190,17 +190,20 @@
                          android:button="@drawable/chk_like"
                          android:background="@drawable/border_00ff0000"/>-->
 
-                    <ImageButton
+
+                    <ImageView
                         android:id="@+id/ibLike"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="15dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignStart="@+id/tvHitCV"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="12dp"
                         android:layout_toRightOf="@+id/tvHitCV"
                         android:background="@color/white"
-                        android:src="@drawable/ic_baseline_back_hand_24"
+                        android:src="@drawable/good"
                         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
 
                     <TextView
                         android:id="@+id/tvContents_like"
@@ -218,15 +221,15 @@
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="28dp"
-                        android:layout_height="27dp"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_toRightOf="@id/tvContents_like"
-                        android:src="@drawable/fish" />
+                        android:src="@drawable/notes" />
 
                     <TextView
                         android:id="@+id/tvCommentCount"
