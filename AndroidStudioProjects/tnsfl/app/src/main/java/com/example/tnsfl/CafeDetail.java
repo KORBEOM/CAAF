@@ -3,8 +3,10 @@ package com.example.tnsfl;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +19,14 @@ public class CafeDetail extends AppCompatActivity {
     private TextView cafeCATE;
     private TextView cafeOLD;
     private TextView cafeNEW;
+    private RatingBar ratingbar;
+    private static final String TAG = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cafe_detail);
+        ratingbar = (RatingBar) findViewById(R.id.ratingBar);
 
         cafeCATE = findViewById(R.id.cafecategorie);
         cafeNAME = findViewById(R.id.cafename);
@@ -42,6 +47,16 @@ public class CafeDetail extends AppCompatActivity {
         cafeOLD.setText("지번: " + cafe_old);
         cafeNEW.setText("도로명: " + cafe_new);
 
+        ratingbar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                Log.d(TAG , String.valueOf(ratingBar.getRating()));
+                if(ratingBar.getRating() < 1.0f){
+                    ratingBar.setRating(1);
+                }
+            }
+        });
+        Log.d(TAG , "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
         Backbtn = (ImageView)findViewById(R.id.backBtn2);
         Backbtn.setOnClickListener(new View.OnClickListener() {
@@ -104,4 +119,5 @@ public class CafeDetail extends AppCompatActivity {
         });
 
     }
+
 }
