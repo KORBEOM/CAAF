@@ -30,7 +30,6 @@ public class marketAdapter extends RecyclerView.Adapter<marketAdapter.ViewHolder
 
     public marketAdapter( List<marketData> items , Activity activity){
         this.items = items;
-        Log.d(TAG, String.valueOf(items.get(0).getTag1()));
         this.activity = activity;
     }
 

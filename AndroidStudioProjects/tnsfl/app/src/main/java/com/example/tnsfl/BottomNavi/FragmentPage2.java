@@ -132,14 +132,16 @@ public class FragmentPage2 extends Fragment  {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         recyclerView2 = view.findViewById(R.id.marketContent);
-        Log.d(TAG,"리싸이클러 확인");
         recyclerView2.setHasFixedSize(true);
         marketAdapter Adapter2 = new marketAdapter(MarketdataList,getActivity());
         recyclerView2.addItemDecoration(new RecyclerViewDecoration(30 ,"width"));
         recyclerView2.setAdapter(Adapter2);
 
         RecyclerView.LayoutManager layoutManager2 = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);
+
         recyclerView2.setLayoutManager(layoutManager2);
+
+
         recyclerView2.setItemAnimator(new DefaultItemAnimator());
 
         autoCompleteTextView = (AutoCompleteTextView)view.findViewById(R.id.auto_search2);

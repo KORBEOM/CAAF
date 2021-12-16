@@ -1189,7 +1189,6 @@ public class FragmentPage3 extends Fragment{
                              customMarker.setItemName(result.getDocuments().get(i).getPlace_name());
                              mapView.addPOIItem(customMarker);
                          }
-
                  }
                 else{
                     Log.d(LOG_TAG,"onResponse: 실패 " + response.body());
