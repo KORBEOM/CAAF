@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.24"
+        android:layout_weight="1.55"
         android:background="@drawable/line">
         <ImageView
             android:id="@+id/backBtn2"
@@ -27,21 +27,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginTop="10dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:src="@drawable/waiting"
-                />
+                android:layout_weight="1"
+                android:src="@drawable/waiting" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_weight="0"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/cafename"
@@ -77,71 +77,60 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
-                android:text="카페 이름: 가나다카페"
-                android:textSize="18dp"
+                android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
-                android:autoSizeTextType="uniform"></TextView>
+                android:text="카페 이름: 가나다카페"
+                android:textSize="18dp"></TextView>
 
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/cafecategorie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="카페 종류: 일반 카페"
-            android:bufferType="spannable"
-            android:autoSizeTextType="uniform"></TextView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/cafecategorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:autoSizeTextType="uniform"
+                android:bufferType="spannable"
+                android:text="카페 종류: 일반 카페"></TextView>
 
             <TextView
                 android:id="@+id/cafephone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
-                android:text="전화 번호 : 010-0101-0101"
-                android:autoSizeTextType="uniform"></TextView>
+                android:text="전화 번호 : 010-0101-0101"></TextView>
 
             <TextView
                 android:id="@+id/oldaddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
-                android:text="지번: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"
-                android:autoSizeTextType="uniform"></TextView>
+                android:text="지번: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"></TextView>
 
             <TextView
                 android:id="@+id/newaddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
+                android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
-                android:text="도로명: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"
-                android:autoSizeTextType="uniform"></TextView>
-        </LinearLayout>
+                android:text="도로명: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"></TextView>
 
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.74">
+        android:layout_weight="1.45">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -170,6 +159,7 @@
                     android:isIndicator="true"
                     android:numStars="5"
                     android:rating="3"
+                    android:theme="@style/RatingBar"
                     android:stepSize="0.5" />
             </LinearLayout>
         </LinearLayout>

@@ -2,7 +2,12 @@ package com.example.tnsfl;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,6 +25,13 @@ public class CafeDetail extends AppCompatActivity {
     private TextView cafeOLD;
     private TextView cafeNEW;
     private RatingBar ratingbar;
+    SpannableStringBuilder builder;
+    SpannableStringBuilder builder2;
+    SpannableStringBuilder builder3;
+    SpannableStringBuilder builder4;
+    SpannableStringBuilder builder5;
+    StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
+    RelativeSizeSpan sizeBigSpan = new RelativeSizeSpan(1.5f);
     private static final String TAG = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
     @Override
@@ -46,6 +58,39 @@ public class CafeDetail extends AppCompatActivity {
         cafePHONE.setText("전화 번호: " + cafe_phone);
         cafeOLD.setText("지번: " + cafe_old);
         cafeNEW.setText("도로명: " + cafe_new);
+
+        String cateData =cafeCATE.getText().toString();
+        String nameData = cafeNAME.getText().toString();
+        String phoneData = cafePHONE.getText().toString();
+        String oldData = cafeOLD.getText().toString();
+        String newData = cafeNEW.getText().toString();
+
+        builder = new SpannableStringBuilder(cateData);
+        builder2 = new SpannableStringBuilder(nameData);
+        builder3 = new SpannableStringBuilder(phoneData);
+        builder4 = new SpannableStringBuilder(oldData);
+        builder5 = new SpannableStringBuilder(newData);
+
+        builder.setSpan(boldSpan,0,5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(sizeBigSpan,0,5,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        builder2.setSpan(boldSpan,0,5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder2.setSpan(sizeBigSpan,0,5,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        builder3.setSpan(boldSpan,0,5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder3.setSpan(sizeBigSpan,0,5,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        builder4.setSpan(boldSpan,0,2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder4.setSpan(sizeBigSpan,0,2,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        builder5.setSpan(boldSpan,0,3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder5.setSpan(sizeBigSpan,0,3,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        cafeCATE.setText(builder);
+        cafeNAME.setText(builder2);
+        cafePHONE.setText(builder3);
+        cafeOLD.setText(builder4);
+        cafeNEW.setText(builder5);
 
         ratingbar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
