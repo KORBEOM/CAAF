@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#F5FFE9"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="250dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:text="Cafe in"
+            android:textSize="30dp"
+            android:fontFamily="@font/kokomi"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/put_text"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/kokomi"
+            android:layout_height="0dp"
+            android:layout_weight="1.8"
+            android:text="Cafe in 이용해주셔서 감사합니다"/>
+        <LinearLayout
+            android:layout_marginRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="right">
+            <Button
+                android:text="취소"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/btnCancle5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#E6DC7F"
+                android:scaleType="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

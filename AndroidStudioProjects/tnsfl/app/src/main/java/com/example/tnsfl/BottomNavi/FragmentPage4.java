@@ -19,7 +19,7 @@ import com.example.tnsfl.R;
 public class FragmentPage4 extends Fragment implements View.OnClickListener {
 
     TextView fr4_tx1,fr4_tx2,fr4_tx3,fr4_tx4,textView9;
-    Dialog customdialog,customdialog2,customdialog3,customdialog4;
+    Dialog customdialog,customdialog2,customdialog3,customdialog4,customdialog5;
 
 
     @Nullable
@@ -33,17 +33,19 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
         customdialog2 = new Dialog(getActivity());
         customdialog3 = new Dialog(getActivity());
         customdialog4 = new Dialog(getActivity());
+        customdialog5 = new Dialog(getActivity());
 
         customdialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         customdialog2.requestWindowFeature(Window.FEATURE_NO_TITLE);
         customdialog3.requestWindowFeature(Window.FEATURE_NO_TITLE);
         customdialog4.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        customdialog5.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         customdialog.setContentView(R.layout.customdialog);
         customdialog2.setContentView(R.layout.customdialog2);
         customdialog3.setContentView(R.layout.customdialog3);
         customdialog4.setContentView(R.layout.customdialog4);
-
+        customdialog5.setContentView(R.layout.customdialog5);
 
 
 
@@ -69,6 +71,11 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(View view) {
                 showcustomDialog4();
+            }
+        }); view.findViewById(R.id.fr4_tx5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showcustomDialog5();
             }
         });
 
@@ -132,6 +139,18 @@ public class FragmentPage4 extends Fragment implements View.OnClickListener {
             public void onClick(View view) {
                 // 원하는 기능 구현
                 customdialog4.dismiss(); // 다이얼로그 닫기
+            }
+        });
+    }
+    public void showcustomDialog5(){
+        customdialog5.show();
+
+        Button btnCancle5 = customdialog5.findViewById(R.id.btnCancle5);
+        btnCancle5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                customdialog5.dismiss(); // 다이얼로그 닫기
             }
         });
     }
