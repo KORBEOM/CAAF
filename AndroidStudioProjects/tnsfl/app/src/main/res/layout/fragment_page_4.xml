@@ -36,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <TextView
         android:id="@+id/fr4_tx1"
@@ -90,13 +90,10 @@
         app:layout_constraintVertical_bias="0.476" />
 
 
-
-
     <TextView
         android:id="@+id/fr4_tx5"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:textSize="20dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="38dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/round"
@@ -104,12 +101,13 @@
         android:gravity="center"
         android:text="Cafe in"
         android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.798"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.147" />
 
     <TextView
         android:id="@+id/textView6"
@@ -139,16 +137,29 @@
 
     <TextView
         android:id="@+id/textView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/round"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintVertical_bias="0.085" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
