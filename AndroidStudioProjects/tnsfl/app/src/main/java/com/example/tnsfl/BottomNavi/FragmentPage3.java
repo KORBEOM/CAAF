@@ -1149,6 +1149,8 @@ public class FragmentPage3 extends Fragment{
     AdapterView.OnItemClickListener clickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            autoCompleteTextView.setText(null);
+            mapView.removeAllPOIItems();
             String toastMessage = ((TextView)view).getText().toString();
             searchKeyword(toastMessage);
             Toast.makeText(getContext(),toastMessage , Toast.LENGTH_SHORT).show();
@@ -1178,7 +1180,6 @@ public class FragmentPage3 extends Fragment{
                      Log.d(LOG_TAG, "onResponse: 성공 , 결과 ," + result.getDocuments().get(0).getX() + "      " + result.getDocuments().get(0).getY() + "   :" + result.getDocuments().get(0).getPlace_name());
 
                          for(int i =0; i < result.getDocuments().size(); i++){
-
                              String lat = result.getDocuments().get(i).getX();
                              String lon = result.getDocuments().get(i).getY();
                              MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(Double.parseDouble(lon), Double.parseDouble(lat));
@@ -1188,7 +1189,6 @@ public class FragmentPage3 extends Fragment{
                              customMarker.setItemName(result.getDocuments().get(i).getPlace_name());
                              mapView.addPOIItem(customMarker);
                          }
-
 
                  }
                 else{

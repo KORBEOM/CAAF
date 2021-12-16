@@ -297,7 +297,7 @@ public class FragmentPage2 extends Fragment  {
                 if (response.isSuccessful()) {
 
                     dataModelArrayList = response.body();
-                    Log.d(TAG, "onResponse:성공, 결과 \n" + dataModelArrayList.get(0));
+                    Log.d(TAG, "onResponse:성공, 결과 \n" + dataModelArrayList);
 
                     List<String> DataSearch = new ArrayList<String>();
 
