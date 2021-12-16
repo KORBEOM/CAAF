@@ -79,6 +79,7 @@
                 android:layout_marginRight="10dp"
                 android:text="카페 이름: 가나다카페"
                 android:textSize="18dp"
+                android:bufferType="spannable"
                 android:autoSizeTextType="uniform"></TextView>
 
 
@@ -92,6 +93,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:text="카페 종류: 일반 카페"
+            android:bufferType="spannable"
             android:autoSizeTextType="uniform"></TextView>
 
         <LinearLayout
@@ -107,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
+                android:bufferType="spannable"
                 android:text="전화 번호 : 010-0101-0101"
                 android:autoSizeTextType="uniform"></TextView>
 
@@ -117,6 +120,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
+                android:bufferType="spannable"
                 android:text="지번: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"
                 android:autoSizeTextType="uniform"></TextView>
 
@@ -127,6 +131,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
+                android:bufferType="spannable"
                 android:text="도로명: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"
                 android:autoSizeTextType="uniform"></TextView>
         </LinearLayout>
