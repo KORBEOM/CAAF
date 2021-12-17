@@ -4,35 +4,38 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@drawable/line"
-        >
+        android:orientation="vertical">
+
+
         <AutoCompleteTextView
             android:id="@+id/auto_search"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:background="@drawable/whiteborder"
-            android:maxLines="10"
             android:completionThreshold="1"
             android:hint="검색어를 입력하세요"
+            android:maxLines="10"
             android:paddingLeft="13dp"
-            android:layout_margin="8dp"
-            />
-
+            android:textColorHint="@color/black" />
 
         <RelativeLayout
             android:id="@+id/map_view"
-            android:background="@drawable/frg4_login"
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="15"/>
+            android:layout_margin="20dp"
+            android:layout_weight="15"
+            android:background="@drawable/frg4_login" />
 
     </LinearLayout>
 
