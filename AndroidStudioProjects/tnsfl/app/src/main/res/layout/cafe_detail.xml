@@ -81,7 +81,8 @@
                 android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
                 android:text="카페 이름: 가나다카페"
-                android:textColor="@color/black"</TextView>
+                android:textColor="@color/black">
+            </TextView>
 
             <TextView
                 android:id="@+id/cafecategorie"
@@ -173,4 +174,4 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
