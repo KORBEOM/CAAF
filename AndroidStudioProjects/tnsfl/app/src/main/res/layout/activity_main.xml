@@ -45,7 +45,7 @@
         app:itemBackground="@color/white"
         app:itemIconSize="30dp"
         app:itemIconTint="#915302"
-        app:itemTextColor="@color/pick"
+        app:itemTextColor="@color/pick3"
         app:menu="@menu/bottom_navi" />
 
 </LinearLayout>
