@@ -8,7 +8,7 @@
     android:layout_weight="1"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/baigee"
+    android:background="@color/white"
     android:clickable="true">
     <LinearLayout
         android:layout_width="match_parent"
@@ -73,6 +73,7 @@
 
             <TextView
                 android:id="@+id/cafename"
+                android:fontFamily="@font/kokomi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -80,11 +81,11 @@
                 android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
                 android:text="카페 이름: 가나다카페"
-                android:textColor="@color/black"
-                android:textSize="18dp"></TextView>
+                android:textColor="@color/black"</TextView>
 
             <TextView
                 android:id="@+id/cafecategorie"
+                android:fontFamily="@font/kokomi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -99,6 +100,7 @@
                 android:id="@+id/cafephone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/kokomi"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
                 android:autoSizeTextType="uniform"
@@ -111,6 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/kokomi"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:autoSizeTextType="uniform"
@@ -124,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:fontFamily="@font/kokomi"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
                 android:bufferType="spannable"
@@ -135,7 +139,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.45">
+        android:layout_weight="1.5">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
