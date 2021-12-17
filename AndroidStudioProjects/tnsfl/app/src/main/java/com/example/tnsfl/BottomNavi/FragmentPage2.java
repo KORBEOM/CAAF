@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -68,6 +69,7 @@ public class FragmentPage2 extends Fragment  {
     private List<BoardData> dataModelArrayList ;
     private List<marketData> MarketdataList = new ArrayList<>();
     MyRecyclerViewAdapter2 adapter;
+    private InputMethodManager imm;
     Dialog custom_dialog;
     AutoCompleteTextView autoCompleteTextView;
     Dialog newDial;
@@ -106,6 +108,8 @@ public class FragmentPage2 extends Fragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_page_2, container, false);
+
+        imm = (InputMethodManager) getContext().getSystemService(getContext().INPUT_METHOD_SERVICE);
 
         newBtn = (Button) view.findViewById(R.id.button_frg2);
         newDial = new Dialog(getActivity());
@@ -179,9 +183,6 @@ public class FragmentPage2 extends Fragment  {
                     Log.d(TAG,"onResponse: 실패 " + response.body());
                 }
             }
-
-
-
             @Override
             public void onFailure(Call<List<BoardData>> call, Throwable t) {
                 Log.d(TAG,"onFailure "+t.getMessage());
@@ -329,16 +330,21 @@ public class FragmentPage2 extends Fragment  {
             AdapterView.OnItemClickListener clickListener = new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    hideKeyboard(autoCompleteTextView);
                     String toastMessage = ((TextView)view).getText().toString();
                     searchKeyword(toastMessage);
                     Toast.makeText(getContext(),toastMessage , Toast.LENGTH_SHORT).show();
-
                 }
             };
         });
     }
 
-
+    public final void hideKeyboard(View v){
+        InputMethodManager var10000 = this.imm;
+        if(var10000 != null){
+            var10000.hideSoftInputFromWindow(v.getWindowToken(),0);
+        }
+    }
 
 
 }

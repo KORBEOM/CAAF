@@ -45,7 +45,7 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView tvTitleCV, tvDateCV, tvContentsCV, tvNickNameCV, tvHitCV, tvCommentCount;
         public ImageView ivImageCV;
-        public ImageButton ibLike;
+        public ImageView ibLike;
 
         // 뷰홀더
         public MyViewHolder(View view) {
@@ -57,7 +57,7 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
             this.tvHitCV = (TextView) view.findViewById(R.id.tvHitCV);
             this.tvCommentCount = (TextView) view.findViewById(R.id.tvCommentCount);
             this.tvDateCV = (TextView) view.findViewById(R.id.tvDateCV);
-            this.ibLike = (ImageButton)view.findViewById(R.id.ibLike);
+            this.ibLike = (ImageView) view.findViewById(R.id.ibLike);
 
             // 리사이클러뷰의 각 아이템을 재사용하는 MyViewHolder 에서 각 아이템에 대한 클릭 리스너를 달 수 있다. : 필요시 사용
             // MyViewHolder 가 리사이클러뷰의 각 뷰 항목을 만드는 역할을 하기 때문에, 여기서 작업을 해야한다.
