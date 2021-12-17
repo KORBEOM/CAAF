@@ -1,31 +1,33 @@
 package com.example.tnsfl.BottomNavi;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.view.inputmethod.InputMethod;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.tnsfl.DataSet.kakaResult;
 import com.example.tnsfl.Interface.kakaoApi;
 import com.example.tnsfl.R;
-import com.google.android.gms.maps.model.MarkerOptions;
 
+import net.daum.mf.map.api.CalloutBalloonAdapter;
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,12 +39,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class FragmentPage3 extends Fragment{
 
     private final String API_KEY = "KakaoAK e3ed986bb1fc57e3a43528fecbf5600d";
-
+    Context context;
     private static final String LOG_TAG = "Fragment3";
     private MapView mapView;
     private ViewGroup mapViewContainer;
     AutoCompleteTextView autoCompleteTextView;
     private MapPoint CenterDot = MapPoint.mapPointWithGeoCoord(36.8149725651939, 127.1146403109173);
+    private InputMethodManager imm;
 
     static final String[] COUNTRIES =new String[]{
             "카페이레",
@@ -1141,9 +1144,12 @@ public class FragmentPage3 extends Fragment{
         mapView.setZoomLevel(6, true);
         mapViewContainer.addView(mapView);
 
+        imm = (InputMethodManager) getContext().getSystemService(getContext().INPUT_METHOD_SERVICE);
+
 
         return view;
     }
+
 
 
     AdapterView.OnItemClickListener clickListener = new AdapterView.OnItemClickListener() {
@@ -1152,6 +1158,7 @@ public class FragmentPage3 extends Fragment{
             autoCompleteTextView.setText(null);
             mapView.removeAllPOIItems();
             String toastMessage = ((TextView)view).getText().toString();
+            hideKeyboard(autoCompleteTextView);
             searchKeyword(toastMessage);
             Toast.makeText(getContext(),toastMessage , Toast.LENGTH_SHORT).show();
         }
@@ -1183,16 +1190,22 @@ public class FragmentPage3 extends Fragment{
                      mapView.setMapCenterPoint(mapPoint1, true);
                      mapView.setZoomLevel(1, true);
 
+
                      for(int i =0; i < result.getDocuments().size(); i++){
                              String lat = result.getDocuments().get(i).getX();
                              String lon = result.getDocuments().get(i).getY();
                              MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(Double.parseDouble(lon), Double.parseDouble(lat));
 
+
                              MapPOIItem customMarker = new MapPOIItem();
                              customMarker.setMapPoint(mapPoint);
                              customMarker.setItemName(result.getDocuments().get(i).getPlace_name());
+                             customMarker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+
+
                              mapView.addPOIItem(customMarker);
                          }
+
                  }
                 else{
                     Log.d(LOG_TAG,"onResponse: 실패 " + response.body());
@@ -1207,8 +1220,13 @@ public class FragmentPage3 extends Fragment{
 
             }
         });
-
-
     };
+
+    public final void hideKeyboard(View v){
+        InputMethodManager var10000 = this.imm;
+        if(var10000 != null){
+            var10000.hideSoftInputFromWindow(v.getWindowToken(),0);
+        }
+    }
 
 }
