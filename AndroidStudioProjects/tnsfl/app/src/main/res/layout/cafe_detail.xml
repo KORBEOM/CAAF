@@ -149,7 +149,6 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/layout_round"
             android:gravity="center"
             android:orientation="vertical"
             android:clickable="true">
@@ -175,3 +174,4 @@
         </LinearLayout>
     </LinearLayout>
 
+</LinearLayout>
