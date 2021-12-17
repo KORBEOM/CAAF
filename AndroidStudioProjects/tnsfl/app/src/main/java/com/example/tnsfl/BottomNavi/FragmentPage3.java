@@ -1174,12 +1174,16 @@ public class FragmentPage3 extends Fragment{
         call.enqueue(new Callback<kakaResult>() {
             @Override
             public void onResponse(Call<kakaResult> call, Response<kakaResult> response) {
-
                  if(response.isSuccessful()) {
                      kakaResult result = response.body();
                      Log.d(LOG_TAG, "onResponse: 성공 , 결과 ," + result.getDocuments().get(0).getX() + "      " + result.getDocuments().get(0).getY() + "   :" + result.getDocuments().get(0).getPlace_name());
 
-                         for(int i =0; i < result.getDocuments().size(); i++){
+                     MapPoint mapPoint1 = MapPoint.mapPointWithGeoCoord(Double.parseDouble(result.getDocuments().get(0).getY()),Double.parseDouble(result.getDocuments().get(0).getX()));
+
+                     mapView.setMapCenterPoint(mapPoint1, true);
+                     mapView.setZoomLevel(1, true);
+
+                     for(int i =0; i < result.getDocuments().size(); i++){
                              String lat = result.getDocuments().get(i).getX();
                              String lon = result.getDocuments().get(i).getY();
                              MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(Double.parseDouble(lon), Double.parseDouble(lat));

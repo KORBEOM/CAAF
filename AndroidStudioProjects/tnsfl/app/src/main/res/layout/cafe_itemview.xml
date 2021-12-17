@@ -26,7 +26,7 @@
             android:background="@drawable/layout_round"
             android:orientation="horizontal">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/cafe_logo"
                 android:layout_width="146dp"
                 android:layout_height="136dp"
