@@ -20,8 +20,8 @@
 
             <LinearLayout
                 android:id="@+id/intromainLayout"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_width="360dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal">
 
