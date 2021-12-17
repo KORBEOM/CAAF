@@ -5,11 +5,10 @@
     android:id="@+id/widget_collect"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp"
     android:layout_weight="1"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/white"
+    android:background="@drawable/line"
     android:clickable="true">
 
 
@@ -22,7 +21,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_weight="1"
-        android:background="@drawable/layout_round"
+
         android:gravity="center"
         android:orientation="vertical"
         android:clickable="true">
@@ -36,22 +35,24 @@
 
             <LinearLayout
                 android:id="@+id/widget_1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"
                     android:src="@drawable/cufu"
                     />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -72,12 +73,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:src="@drawable/catoon" />
+                    android:src="@drawable/catoon"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -98,12 +101,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:src="@drawable/vrgame1" />
+                    android:src="@drawable/vrgame1"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -132,12 +137,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:src="@drawable/kids" />
+                    android:src="@drawable/kids"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -159,12 +166,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:src="@drawable/study" />
+                    android:src="@drawable/study"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -185,12 +194,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:src="@drawable/board" />
+                    android:src="@drawable/board"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -219,12 +230,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"
                     android:src="@drawable/catdog" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -244,13 +257,15 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"
                     android:layout_weight="1"
                     android:src="@drawable/fish" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -271,13 +286,15 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"
                     android:layout_weight="1"
                     android:src="@drawable/making" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -306,13 +323,15 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"
                     android:layout_weight="1"
                     android:src="@drawable/room" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -333,13 +352,15 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"
                     android:layout_weight="1"
                     android:src="@drawable/escape" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"
@@ -359,13 +380,15 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_2"
                     android:layout_weight="1"
                     android:src="@drawable/trandition" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+
                     android:layout_weight="1"
                     android:fontFamily="@font/kokomi"
                     android:gravity="center"

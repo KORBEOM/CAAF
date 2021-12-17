@@ -13,13 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="5dp">
+
+        android:background="@drawable/line">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/binggr"
             android:text="Cafe in"
+            android:layout_margin="10dp"
             android:textSize="40dp"
             android:textColor="@color/black"
             ></TextView>
@@ -30,7 +32,8 @@
         android:id="@+id/content_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        >
 
 
     </FrameLayout>
@@ -41,8 +44,8 @@
         android:layout_height="wrap_content"
         app:itemBackground="@color/white"
         app:itemIconSize="30dp"
-        app:itemIconTint="#742322"
-        app:itemTextColor="@color/pick4"
+        app:itemIconTint="#915302"
+        app:itemTextColor="@color/pick"
         app:menu="@menu/bottom_navi" />
 
 </LinearLayout>
