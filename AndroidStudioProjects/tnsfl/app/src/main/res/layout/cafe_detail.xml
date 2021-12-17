@@ -73,16 +73,16 @@
 
             <TextView
                 android:id="@+id/cafename"
-                android:fontFamily="@font/kokomi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
+                android:fontFamily="@font/kokomi"
                 android:text="카페 이름: 가나다카페"
-                android:textColor="@color/black">
-            </TextView>
+                android:textColor="@color/black"
+                android:textSize="23dp"></TextView>
 
             <TextView
                 android:id="@+id/cafecategorie"
@@ -95,6 +95,7 @@
                 android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
                 android:textColor="@color/black"
+                android:textSize="23dp"
                 android:text="카페 종류: 일반 카페"></TextView>
 
             <TextView
@@ -106,6 +107,7 @@
                 android:layout_marginBottom="10dp"
                 android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
+                android:textSize="23dp"
                 android:textColor="@color/black"
                 android:text="전화 번호 : 010-0101-0101"></TextView>
 
@@ -119,6 +121,7 @@
                 android:layout_marginBottom="10dp"
                 android:autoSizeTextType="uniform"
                 android:bufferType="spannable"
+                android:textSize="23dp"
                 android:textColor="@color/black"
                 android:text="지번: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"></TextView>
 
@@ -131,6 +134,7 @@
                 android:fontFamily="@font/kokomi"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
+                android:textSize="23dp"
                 android:bufferType="spannable"
                 android:text="도로명: 가 나 다 라 마 바 사 아 자 차 카 타 파 하"></TextView>
 
