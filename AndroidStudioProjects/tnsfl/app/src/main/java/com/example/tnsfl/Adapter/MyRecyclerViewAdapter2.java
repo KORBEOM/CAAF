@@ -95,10 +95,20 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
         holder.tvTitleCV.setText(dataModelPosition.getTitle());
         holder.tvContentsCV.setText(dataModelPosition.getContents());
         holder.tvNickNameCV.setText(dataModelPosition.getNickName());
-        holder.tvHitCV.setText(dataModelPosition.getHit());
-        holder.tvCommentCount.setText(dataModelPosition.getComment());
-        holder.tvDateCV.setText(dataModelPosition.getDate());
-
+        if(dataModelPosition.getHit() == null){
+            holder.tvHitCV.setText("0");
+        }else{
+            holder.tvHitCV.setText(dataModelPosition.getHit());
+        }
+        if(dataModelPosition.getComment() == null){
+            holder.tvCommentCount.setText("0");
+        }else{
+            holder.tvCommentCount.setText(dataModelPosition.getComment());
+        }if(dataModelPosition.getDate() == null){
+            holder.tvDateCV.setText("00-00-00 00:00");
+        }else{
+            holder.tvDateCV.setText(dataModelPosition.getDate());
+        }
         context = holder.itemView.getContext();
 
         /* 리사이클러뷰의 버튼을 클릭할 때 실행될 것들을 적어준다. */
