@@ -10,7 +10,7 @@ import java.util.List;
 public class CafeItem {
 
     @SerializedName("image")
-    private BufferedInputStream iamge;
+    private String iamge;
 
 
 
@@ -29,7 +29,7 @@ public class CafeItem {
     @SerializedName("Location2")
     private String location2;
 
-    public BufferedInputStream getImage(){return this.iamge; };
+    public String  getImage(){return this.iamge; };
     public String getTitle(){return this.title;};
     public String getCategorie(){return this.categorie;};
     public String getPhone(){return this.phone;};

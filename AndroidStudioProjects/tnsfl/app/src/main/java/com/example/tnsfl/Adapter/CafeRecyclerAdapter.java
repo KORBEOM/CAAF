@@ -7,6 +7,7 @@ import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Base64;
 import java.util.List;
 
 public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapter.ViewHolder> {
@@ -50,9 +52,11 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
         CafeItem item = items.get(position);
         Log.d(TAG,item.getTitle());
 
-//        if(item.getImage() != null){
-//            holder.image.setImageBitmap(item.getImage());
-//        }
+        if(item.getImage() != null){
+            String imageString = item.getImage();
+            Bitmap decodeByte = BitmapFactory.decodeByteArray(Base64.getDecoder().decode(imageString),0,Base64.getDecoder().decode(imageString).length );
+            holder.image.setImageBitmap(decodeByte);
+        }
         holder.title.setText(item.getTitle());
         holder.phone.setText(item.getPhone());
         holder.newaddress.setText(item.getLocation2());
@@ -97,4 +101,5 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
         }
 
     }
+
 }
