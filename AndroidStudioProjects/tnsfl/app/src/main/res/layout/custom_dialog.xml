@@ -87,12 +87,8 @@
                     android:background="@drawable/layout_round"
                     android:text="카테고리"
                     android:textColor="@color/black"
-<<<<<<< Updated upstream
-                    android:textSize="20sp"
-=======
-                    android:textSize="12sp"
->>>>>>> Stashed changes
-                    android:gravity="center"/>
+                    android:textSize="20sp"></TextView>
+
 
         </LinearLayout>
     </LinearLayout>
@@ -109,14 +105,9 @@
             android:layout_height="match_parent"
             android:background="@drawable/frg4set"
             android:layout_margin="15dp"
-<<<<<<< Updated upstream
-            android:hint="자신의 내용을 말해보세요."
-=======
-            android:hint="자신의 생각을 말해보세요."
->>>>>>> Stashed changes
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:gravity="center">
+
+            android:hint="자신의 내용을 말해보세요.">
+
         </EditText>
 
     </LinearLayout>
