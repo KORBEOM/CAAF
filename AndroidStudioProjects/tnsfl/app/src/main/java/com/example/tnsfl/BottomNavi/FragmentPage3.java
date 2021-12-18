@@ -7,17 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.view.inputmethod.InputMethod;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.tnsfl.DataSet.kakaResult;
@@ -1160,7 +1157,7 @@ public class FragmentPage3 extends Fragment{
             String toastMessage = ((TextView)view).getText().toString();
             hideKeyboard(autoCompleteTextView);
             searchKeyword(toastMessage);
-            Toast.makeText(getContext(),toastMessage , Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getContext(),toastMessage , Toast.LENGTH_SHORT).show();
         }
     };
 
@@ -1183,15 +1180,16 @@ public class FragmentPage3 extends Fragment{
             public void onResponse(Call<kakaResult> call, Response<kakaResult> response) {
                  if(response.isSuccessful()) {
                      kakaResult result = response.body();
-                     Log.d(LOG_TAG, "onResponse: 성공 , 결과 ," + result.getDocuments().get(0).getX() + "      " + result.getDocuments().get(0).getY() + "   :" + result.getDocuments().get(0).getPlace_name());
+                     Log.d(LOG_TAG, "onResponse: 성공 , 결과 ," + result.getDocuments());
 
-                     MapPoint mapPoint1 = MapPoint.mapPointWithGeoCoord(Double.parseDouble(result.getDocuments().get(0).getY()),Double.parseDouble(result.getDocuments().get(0).getX()));
+                     if(result.getDocuments().size() == 0) {
+                        Toast.makeText(getContext(),"존재 하지 않습니다.",Toast.LENGTH_LONG).show();
+                    }else{
+                         MapPoint mapPoint1 = MapPoint.mapPointWithGeoCoord(Double.parseDouble(result.getDocuments().get(0).getY()),Double.parseDouble(result.getDocuments().get(0).getX()));
+                         mapView.setMapCenterPoint(mapPoint1, true);
+                         mapView.setZoomLevel(1, true);
 
-                     mapView.setMapCenterPoint(mapPoint1, true);
-                     mapView.setZoomLevel(1, true);
-
-
-                     for(int i =0; i < result.getDocuments().size(); i++){
+                         for(int i =0; i < result.getDocuments().size(); i++){
                              String lat = result.getDocuments().get(i).getX();
                              String lon = result.getDocuments().get(i).getY();
                              MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(Double.parseDouble(lon), Double.parseDouble(lat));
@@ -1204,7 +1202,9 @@ public class FragmentPage3 extends Fragment{
 
 
                              mapView.addPOIItem(customMarker);
+                             //mapView.setCalloutBalloonAdapter(new CustomCalloutBalloonAdapter(result.getDocuments().get(0).getPlace_name(),result.getDocuments().get(0).getRoad_address_name(),result.getDocuments().get(0).getPhone()));
                          }
+                    }
 
                  }
                 else{
@@ -1226,6 +1226,34 @@ public class FragmentPage3 extends Fragment{
         InputMethodManager var10000 = this.imm;
         if(var10000 != null){
             var10000.hideSoftInputFromWindow(v.getWindowToken(),0);
+        }
+    }
+
+    class CustomCalloutBalloonAdapter implements CalloutBalloonAdapter{
+        private final View mCalloutBallon;
+        private String title;
+        private String road;
+        private String phone;
+
+        public CustomCalloutBalloonAdapter(String title,String road , String phone) {
+            this.mCalloutBallon = getLayoutInflater().inflate(R.layout.custom_bollon,null);
+            this.title = title;
+            this.road = road;
+            this.phone = phone;
+        }
+
+
+        @Override
+        public View getCalloutBalloon(MapPOIItem mapPOIItem) {
+            ((TextView)mCalloutBallon.findViewById(R.id.customTitle)).setText(this.title);
+            ((TextView)mCalloutBallon.findViewById(R.id.customRoad)).setText(this.road);
+            ((TextView)mCalloutBallon.findViewById(R.id.customPhone)).setText(this.phone);
+            return mCalloutBallon;
+        }
+
+        @Override
+        public View getPressedCalloutBalloon(MapPOIItem mapPOIItem) {
+            return null;
         }
     }
 
