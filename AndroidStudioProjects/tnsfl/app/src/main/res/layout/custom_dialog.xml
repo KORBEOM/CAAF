@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/whitebackground"
+    android:background="@drawable/writing"
     android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
@@ -36,7 +36,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/frg4set"
+            android:background="@drawable/layout_round"
             android:layout_margin="15dp"
             android:hint="제목"
             android:textColor="@color/black"
@@ -62,10 +62,12 @@
                 android:id="@+id/categoriemenu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/frg4set"
+                android:popupBackground="@color/black"
+                android:background="@drawable/layout_round"
                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"/>
+                android:layout_marginBottom="15dp" />
 
 
         </LinearLayout>
@@ -80,11 +82,16 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="15dp"
                     android:layout_marginRight="15dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/frg4set"
+                    android:background="@drawable/layout_round"
                     android:text="카테고리"
                     android:textColor="@color/black"
+<<<<<<< Updated upstream
                     android:textSize="20sp"
+=======
+                    android:textSize="12sp"
+>>>>>>> Stashed changes
                     android:gravity="center"/>
 
         </LinearLayout>
@@ -98,10 +105,15 @@
         <EditText
             android:id="@+id/contentDial"
             android:layout_width="match_parent"
+            android:textSize="15dp"
             android:layout_height="match_parent"
             android:background="@drawable/frg4set"
             android:layout_margin="15dp"
+<<<<<<< Updated upstream
             android:hint="자신의 내용을 말해보세요."
+=======
+            android:hint="자신의 생각을 말해보세요."
+>>>>>>> Stashed changes
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:gravity="center">
@@ -129,8 +141,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="취소"
-            android:layout_margin="15dp"
-            android:backgroundTint="@color/pick3">
+            android:layout_margin="10dp"
+            android:backgroundTint="#DDA23F">
 
         </Button>
 
@@ -139,8 +151,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="15dp"
-            android:backgroundTint="@color/pick3"
+            android:layout_margin="10dp"
+            android:backgroundTint="#DDA23F"
             android:text="작성"></Button>
     </LinearLayout>
 
