@@ -23,6 +23,7 @@
     android:background="@drawable/drop_border"
     android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
     android:singleLine="true"
+    android:textColor="@color/black"
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:ellipsize="end" />

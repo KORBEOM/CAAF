@@ -39,4 +39,7 @@ public interface BoardService {
             @Query("id") String id,
             @Query("content")  String content
     );
+
+
+
 }

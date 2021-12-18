@@ -4,10 +4,15 @@ import android.graphics.Bitmap;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.BufferedInputStream;
+import java.util.List;
+
 public class CafeItem {
 
     @SerializedName("image")
-    private Bitmap iamge;
+    private BufferedInputStream iamge;
+
+
 
     @SerializedName("Name")
     private String title;
@@ -24,11 +29,12 @@ public class CafeItem {
     @SerializedName("Location2")
     private String location2;
 
-    public Bitmap getImage(){return this.iamge; };
+    public BufferedInputStream getImage(){return this.iamge; };
     public String getTitle(){return this.title;};
     public String getCategorie(){return this.categorie;};
     public String getPhone(){return this.phone;};
     public String getLocation(){return this.location;};
     public String getLocation2(){return this.location2;};
+
 
 }

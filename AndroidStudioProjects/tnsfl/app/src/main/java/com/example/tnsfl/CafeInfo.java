@@ -121,7 +121,8 @@ public class CafeInfo extends AppCompatActivity {
                 if (response.isSuccessful()) {
 
                     cafeData = response.body();
-                    Log.d(TAG, "onResponse:성공, 결과 \n" + cafeData);
+                    Log.d(TAG, "11111111111111111111111111111111111111111111111111");
+                    Log.d(TAG, "onResponse:성공, 결과aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa \n" + cafeData.get(0).getImage());
 
                     CafeRecyclerAdapter adapter = new CafeRecyclerAdapter( context,cafeData, CafeInfo.this);
                     recyclerView.setAdapter(adapter);

@@ -188,8 +188,6 @@ public class FragmentPage2 extends Fragment  {
                 Log.d(TAG,"onFailure "+t.getMessage());
             }
         });
-
-
     };
     public void showcustomDialog(){
         newDial.show();
@@ -201,7 +199,7 @@ public class FragmentPage2 extends Fragment  {
         TextView cateName = (TextView)newDial.findViewById(R.id.cate);
         EditText content = (EditText)newDial.findViewById(R.id.contentDial) ;
 
-        ArrayAdapter<String> adapterSpin = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item,items);
+        ArrayAdapter<String> adapterSpin = new ArrayAdapter<String>(getContext(), R.layout.dropdwonlist,items);
         adapterSpin.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categorie.setAdapter(adapterSpin);
 

@@ -39,6 +39,8 @@
             android:background="@drawable/frg4set"
             android:layout_margin="15dp"
             android:hint="제목"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:id="@+id/titleDial"
             android:gravity="center"
             >
@@ -81,6 +83,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@drawable/frg4set"
                     android:text="카테고리"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:gravity="center"/>
 
@@ -99,6 +102,8 @@
             android:background="@drawable/frg4set"
             android:layout_margin="15dp"
             android:hint="자신의 내용을 말해보세요."
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:gravity="center">
         </EditText>
 

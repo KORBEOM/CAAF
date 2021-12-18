@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,7 +49,10 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         CafeItem item = items.get(position);
         Log.d(TAG,item.getTitle());
-        //holder.image.setImageBitmap(item.getImage());
+
+//        if(item.getImage() != null){
+//            holder.image.setImageBitmap(item.getImage());
+//        }
         holder.title.setText(item.getTitle());
         holder.phone.setText(item.getPhone());
         holder.newaddress.setText(item.getLocation2());

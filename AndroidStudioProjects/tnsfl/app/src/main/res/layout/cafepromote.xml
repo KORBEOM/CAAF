@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:layout_width="wrap_content">
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,20 +72,22 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:gravity="center"
+                                android:textColor="@color/black"
                                 android:text="#"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/kokomi"/>
 
                             <TextView
-                                android:fontFamily="@font/kokomi"
                                 android:id="@+id/squareMeter_text1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
                                 android:layout_marginLeft="5dp"
-                                android:textAlignment="center"
-                                android:text="승규랑 처음 방문한 카페"
+                                android:textColor="@color/black"
                                 android:autoSizeTextType="uniform"
+                                android:fontFamily="@font/kokomi"
+                                android:gravity="center"
+                                android:text="승규랑 처음 방문한 카페"
+                                android:textAlignment="center"
                                 android:textSize="18sp" />
 
                         </LinearLayout>
@@ -100,6 +102,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:gravity="center"
+                                android:textColor="@color/black"
                                 android:text="#"
                                 android:textAlignment="center"
                                 android:textSize="18sp" />
@@ -110,6 +113,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:gravity="center"
+                                android:textColor="@color/black"
                                 android:autoSizeTextType="uniform"
                                 android:text="기준이가 소개해준 카페"
                                 android:textAlignment="center"
@@ -128,6 +132,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:gravity="center"
+                                android:textColor="@color/black"
                                 android:text="#"
                                 android:textAlignment="center"
                                 android:fontFamily="@font/kokomi"
@@ -139,6 +144,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:gravity="center"
+                                android:textColor="@color/black"
                                 android:autoSizeTextType="uniform"
                                 android:text="용민이가 추천해준 아메리카노가 맛있는 집"
                                 android:textAlignment="center"
