@@ -285,8 +285,6 @@ public class FragmentPage2 extends Fragment  {
                 newDial.dismiss(); // 다이얼로그 닫기
             }
         });
-
-
     }
 
     public void responeBoard(){
