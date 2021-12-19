@@ -40,6 +40,11 @@ public interface BoardService {
             @Query("content")  String content
     );
 
+    @GET("cafeName")
+    Call<List<CafeItem>> getCafe(
+            @Query("name") String name
+    );
+
 
 
 }

@@ -10,9 +10,10 @@ import java.util.List;
 public class CafeItem {
 
     @SerializedName("image")
-    private String iamge;
+    private String image;
 
-
+    @SerializedName("image2")
+    private String image2;
 
     @SerializedName("Name")
     private String title;
@@ -29,7 +30,8 @@ public class CafeItem {
     @SerializedName("Location2")
     private String location2;
 
-    public String  getImage(){return this.iamge; };
+    public String getImage2(){return this.image2;};
+    public String  getImage(){return this.image; };
     public String getTitle(){return this.title;};
     public String getCategorie(){return this.categorie;};
     public String getPhone(){return this.phone;};

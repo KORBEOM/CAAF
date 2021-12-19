@@ -32,7 +32,7 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
 
     private Context context;
     private List<CafeItem> items;
-    private static final String TAG = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    private static final String TAG = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
     private Activity activity;
 
     public CafeRecyclerAdapter(Context context, List<CafeItem> items , Activity activity){
@@ -50,10 +50,11 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         CafeItem item = items.get(position);
-        Log.d(TAG,item.getTitle());
+
 
         if(item.getImage() != null){
             String imageString = item.getImage();
+            Log.d(TAG,imageString);
             Bitmap decodeByte = BitmapFactory.decodeByteArray(Base64.getDecoder().decode(imageString),0,Base64.getDecoder().decode(imageString).length );
             holder.image.setImageBitmap(decodeByte);
         }
@@ -66,11 +67,7 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
                 Log.d(TAG,item.getTitle());
                 Toast.makeText(view.getContext(), item.getTitle(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity,CafeDetail.class);
-                intent.putExtra("categorie" , item.getCategorie());
                 intent.putExtra("cafeName" , item.getTitle());
-                intent.putExtra("cafePhone" , item.getPhone());
-                intent.putExtra("cafeOld" , item.getLocation());
-                intent.putExtra("cafeNew",item.getLocation2());
                 activity.startActivity(intent);
             }
         });
