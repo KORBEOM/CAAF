@@ -54,10 +54,10 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
             this.tvTitleCV = (TextView) view.findViewById(R.id.tvTitleCV);
             this.tvContentsCV = (TextView) view.findViewById(R.id.tvContentsCV);
             this.tvNickNameCV = (TextView) view.findViewById(R.id.tvNickNameCV);
-            this.tvHitCV = (TextView) view.findViewById(R.id.tvHitCV);
-            this.tvCommentCount = (TextView) view.findViewById(R.id.tvCommentCount);
-            this.tvDateCV = (TextView) view.findViewById(R.id.tvDateCV);
-            this.ibLike = (ImageView) view.findViewById(R.id.ibLike);
+//            this.tvHitCV = (TextView) view.findViewById(R.id.tvHitCV);
+//            this.tvCommentCount = (TextView) view.findViewById(R.id.tvCommentCount);
+//            this.tvDateCV = (TextView) view.findViewById(R.id.tvDateCV);
+//            this.ibLike = (ImageView) view.findViewById(R.id.ibLike);
 
             // 리사이클러뷰의 각 아이템을 재사용하는 MyViewHolder 에서 각 아이템에 대한 클릭 리스너를 달 수 있다. : 필요시 사용
             // MyViewHolder 가 리사이클러뷰의 각 뷰 항목을 만드는 역할을 하기 때문에, 여기서 작업을 해야한다.
@@ -69,7 +69,6 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Log.d(TAG, "태그 onCreateViewHolder 들어옴");
 
         View cardView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview, parent, false); //view연결
         MyViewHolder holder = new MyViewHolder(cardView);
@@ -91,33 +90,32 @@ public class MyRecyclerViewAdapter2 extends RecyclerView.Adapter<MyRecyclerViewA
         // 객체가 있는 배열에 담아서 어댑터 쪽으로 쏜다. 그걸 onBindViewHolder 가 받아서 Glide가 load하는 형태이다.
 
         BoardData dataModelPosition = dataModelArrayList.get(position); // 데이터 리스트 객체에서 어떤거 가져올지 위치로 추출
-        Log.d(TAG,dataModelPosition.getContents());
         holder.tvTitleCV.setText(dataModelPosition.getTitle());
         holder.tvContentsCV.setText(dataModelPosition.getContents());
         holder.tvNickNameCV.setText(dataModelPosition.getNickName());
-        if(dataModelPosition.getHit() == null){
-            holder.tvHitCV.setText("0");
-        }else{
-            holder.tvHitCV.setText(dataModelPosition.getHit());
-        }
-        if(dataModelPosition.getComment() == null){
-            holder.tvCommentCount.setText("0");
-        }else{
-            holder.tvCommentCount.setText(dataModelPosition.getComment());
-        }if(dataModelPosition.getDate() == null){
-            holder.tvDateCV.setText("00-00-00 00:00");
-        }else{
-            holder.tvDateCV.setText(dataModelPosition.getDate());
-        }
+//        if(dataModelPosition.getHit() == null){
+//            holder.tvHitCV.setText("0");
+//        }else{
+//            holder.tvHitCV.setText(dataModelPosition.getHit());
+//        }
+//        if(dataModelPosition.getComment() == null){
+//            holder.tvCommentCount.setText("0");
+//        }else{
+//            holder.tvCommentCount.setText(dataModelPosition.getComment());
+//        }if(dataModelPosition.getDate() == null){
+//            holder.tvDateCV.setText("00-00-00 00:00");
+//        }else{
+//            holder.tvDateCV.setText(dataModelPosition.getDate());
+//        }
         context = holder.itemView.getContext();
 
         /* 리사이클러뷰의 버튼을 클릭할 때 실행될 것들을 적어준다. */
-        holder.ibLike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "리사이클러뷰의 좋아요 버튼이 눌렸습니다.", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        holder.ibLike.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(context, "리사이클러뷰의 좋아요 버튼이 눌렸습니다.", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         // Glide : 작성하면 이미지 load가 가능해진다. holder시 삽입될 것이다.
         // override() : 해당 사이즈로 이미지를 늘리거나 줄이는 것.

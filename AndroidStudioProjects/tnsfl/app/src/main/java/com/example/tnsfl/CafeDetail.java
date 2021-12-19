@@ -88,19 +88,15 @@ public class CafeDetail extends AppCompatActivity {
                 if (response.isSuccessful()) {
 
                     cafeData = response.body();
-                    Log.d(TAG, "onResponse:성공, 결과11111111111111111111111111111 \n" + cafeData.get(0).getImage());
 
                     if(cafeData.get(0).getImage() != null){
-
                         String imageString = cafeData.get(0).getImage();
-                        Log.d(TAG,imageString);
                         Bitmap decodeByte = BitmapFactory.decodeByteArray(Base64.getDecoder().decode(imageString),0,Base64.getDecoder().decode(imageString).length );
                         Bitmap bitmap = Bitmap.createBitmap(decodeByte, 0, 0, decodeByte.getWidth(), decodeByte.getHeight(), matrix, false);
                         outside.setImageBitmap(bitmap);
 
                     }
                     if(cafeData.get(0).getImage2() != null){
-                        Log.d(TAG,"2i2i2i22i2i2i2i2i2i22i2i2i2i2i2i2i22i2i2i2i2i");
                         String imageString2 = cafeData.get(0).getImage2();
                         Bitmap decodeByte2 = BitmapFactory.decodeByteArray(Base64.getDecoder().decode(imageString2),0,Base64.getDecoder().decode(imageString2).length );
                         Bitmap bitmap2 = Bitmap.createBitmap(decodeByte2, 0, 0, decodeByte2.getWidth(), decodeByte2.getHeight(), matrix, false);
@@ -168,8 +164,6 @@ public class CafeDetail extends AppCompatActivity {
 //                }
 //            }
 //        });
-        Log.d(TAG , "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-
         Backbtn = (ImageView)findViewById(R.id.backBtn2);
         Backbtn.setOnClickListener(new View.OnClickListener() {
             @Override

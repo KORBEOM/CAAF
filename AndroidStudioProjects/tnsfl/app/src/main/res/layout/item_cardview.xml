@@ -35,39 +35,23 @@
 
 
                     <TextView
-                        android:id="@+id/tvCategoryCV"
-                        android:layout_width="92dp"
-                        android:layout_height="21dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginStart="1dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="262dp"
-                        android:gravity="center_vertical"
-                        android:shadowColor="#0B0A0A"
-                        android:text="카테고리"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#050404"
-                        android:textSize="10dp" />
-
-                    <TextView
                         android:id="@+id/tvTitleCV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvCategoryCV"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="1dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical"
                         android:shadowColor="#0B0A0A"
                         android:text="제목"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#050404"
-                        android:gravity="center_vertical"
-                        android:textSize="17dp"
-                        />
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
 
 
                 </RelativeLayout>
@@ -92,8 +76,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="1dp"
-                        android:textColor="@color/black"
                         android:text="글 내용..."
+                        android:textColor="@color/black"
                         android:textSize="16sp" />
                 </RelativeLayout>
 
@@ -137,11 +121,10 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="1dp"
+                        android:textColor="@color/black"
                         android:text="닉네임"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textSize="13sp"
-                        android:textColor="@color/black"/>
-
+                        android:textSize="13sp" />
                 </RelativeLayout>
 
             </LinearLayout>
@@ -150,129 +133,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#ddd">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="#fff"
-                    android:layout_marginBottom="1dp"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp">
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="28dp"
-                        android:layout_height="27dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="1dp"
-                        android:src="@drawable/eye" />
-
-                    <TextView
-                        android:id="@+id/tvHitCV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_toRightOf="@+id/imageView3"
-                        android:text="6"
-                        android:textAlignment="center"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/black" />
-
-                    <!-- <CheckBox
-                         android:id="@+id/ckBoxContentsLike"
-                         android:layout_width="28dp"
-                         android:layout_height="27dp"
-                         android:layout_toRightOf="@+id/tvHitCV"
-                         android:layout_centerVertical="true"
-                         android:layout_marginStart="15dp"
-                         android:button="@drawable/chk_like"
-                         android:background="@drawable/border_00ff0000"/>-->
-
-
-                    <ImageView
-                        android:id="@+id/ibLike"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_alignStart="@+id/tvHitCV"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginLeft="14dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_toRightOf="@+id/tvHitCV"
-                        android:background="@color/white"
-                        android:src="@drawable/good"
-                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-                    <TextView
-                        android:id="@+id/tvContents_like"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_toRightOf="@+id/ibLike"
-                        android:gravity="center_vertical"
-                        android:hint="좋아요"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColorHint="@color/black" />
-
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="20dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_toRightOf="@id/tvContents_like"
-                        android:src="@drawable/notes" />
-
-                    <TextView
-                        android:id="@+id/tvCommentCount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_toRightOf="@+id/imageView4"
-                        android:text="댓글수"
-                        android:textAlignment="center"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/black" />
-
-                    <!--날짜-->
-
-                    <TextView
-                        android:id="@+id/tvDateCV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="1dp"
-                        android:layout_marginBottom="15dp"
-                        android:text="Date"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/black"
-                        android:textSize="13sp" />
-
-
-
-                </RelativeLayout>
-            </LinearLayout>
+                android:background="#ddd"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

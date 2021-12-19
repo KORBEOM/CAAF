@@ -54,7 +54,6 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
 
         if(item.getImage() != null){
             String imageString = item.getImage();
-            Log.d(TAG,imageString);
             Bitmap decodeByte = BitmapFactory.decodeByteArray(Base64.getDecoder().decode(imageString),0,Base64.getDecoder().decode(imageString).length );
             holder.image.setImageBitmap(decodeByte);
         }
@@ -64,7 +63,6 @@ public class CafeRecyclerAdapter extends RecyclerView.Adapter<CafeRecyclerAdapte
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG,item.getTitle());
                 Toast.makeText(view.getContext(), item.getTitle(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity,CafeDetail.class);
                 intent.putExtra("cafeName" , item.getTitle());
