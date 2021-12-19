@@ -87,7 +87,7 @@ public class FragmentPage2 extends Fragment  {
 
 
     marketData one = new marketData("없는 것 빼고 다 있는 VR카페" , "친구들과 내기 한판" , "넓은 공간 리얼감 UP");
-    marketData two = new marketData("강아지들이 편하게 쉴수있는 공간" , "반려동물을 안키워도 입장 가능" , "강아지들의 사회정 키워주기");
+    marketData two = new marketData("반려동물과의 편한 쉼터 공간" , "반려동물을 안키워도 입장 가능" , "강아지들의 사회정 키워주기");
     marketData three = new marketData("조용한 분위기","혼자 사용 가능한 개인실","간식 제공");
 
 
