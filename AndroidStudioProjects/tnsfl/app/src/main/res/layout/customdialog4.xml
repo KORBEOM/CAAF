@@ -30,8 +30,7 @@
             android:fontFamily="@font/kokomi"
             android:layout_height="0dp"
             android:layout_weight="1.8"
-            android:text="홈 화면의 위젯을 누르면 카페 정도들을 알 수 있고 정보를 공유 할 수 있는 공간과
-지도를 이용해 카페 위치를 찾을 수 있다."/>
+            android:text="이 앱은 카페의 위치,정보등을 공유하는 앱입니다."/>
         <LinearLayout
             android:layout_marginRight="12dp"
             android:layout_width="wrap_content"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:background="#FDE48F"
     android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -27,7 +27,10 @@
             android:layout_width="match_parent"
             android:fontFamily="@font/kokomi"
             android:textColor="@color/black"
-            android:text="이 앱은 카페의 위치,정보등을 공유하는 앱입니다."
+            android:autoSizeTextType="uniform"
+            android:text="Copyright 2021. www.flaticon.com Co, Ltd. all rights reserved.
+Copyright 2021. www.iconfinder Co, Ltd. all rights reserved.
+Copyright 2021.  www.knps.or.kr Co(KKOMI) , Ltd. all rights reserved."
             android:layout_height="0dp"
             android:textSize="20dp"
             android:layout_weight="1.7"/>
@@ -38,15 +41,17 @@
             android:orientation="horizontal"
             android:layout_weight="1"
             android:layout_gravity="right">
+
             <Button
-                android:text="취소"
-                android:textSize="10dp"
-                android:textColor="@color/black"
                 android:id="@+id/btnCancle3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:backgroundTint="#F8AE4C"
-                android:scaleType="center"/>
+                android:scaleType="center"
+                android:text="취소"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
         </LinearLayout>

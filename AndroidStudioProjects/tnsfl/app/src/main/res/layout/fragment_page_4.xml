@@ -15,7 +15,7 @@
         android:background="@drawable/round"
         android:fontFamily="@font/kokomi"
         android:gravity="center"
-        android:text="정보"
+        android:text="저작권"
 
         android:textColor="@color/white"
         android:textSize="30dp"
