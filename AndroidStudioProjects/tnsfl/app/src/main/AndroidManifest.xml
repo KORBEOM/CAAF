@@ -18,7 +18,7 @@
         android:theme="@style/Theme.Tnsfl">
 
 
-        <activity android:name="tnsfl.LodingActivity"
+        <activity android:name="com.tnsfl.LodingActivity"
             android:screenOrientation="portrait"
             android:exported="true">
 
@@ -29,10 +29,10 @@
             </intent-filter>
 
         </activity>
-        <activity android:name="tnsfl.CafeDetail"/>
-        <activity android:name="tnsfl.CafeInfo"/>
+        <activity android:name="com.tnsfl.CafeDetail"/>
+        <activity android:name="com.tnsfl.CafeInfo"/>
         <activity
-            android:name="tnsfl.MainActivity"
+            android:name="com.tnsfl.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"
